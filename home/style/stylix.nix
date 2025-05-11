@@ -62,7 +62,6 @@ in
  gtk.enable = true;
  gtk.iconTheme = {
        name = "Papirus-Dark";
-      # package = pkgs.catppuccin-papirus-folders.override {flavor = "macchiato"; accent = "teal";};
        package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
       };
 
