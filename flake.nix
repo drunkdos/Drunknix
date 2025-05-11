@@ -36,7 +36,7 @@
   	theme = "catppuccin-mocha";
   };
 
-     pkgs = import nixpkgs commonArgs
+     pkgs = import nixpkgs commonArgs;
 #	pkgs = import nixpkgs (commonArgs // {
 #    overlays = [inputs.hyprpanel.overlay];});
 
