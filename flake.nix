@@ -52,14 +52,14 @@
     nixosConfigurations.Drunknix= lib.nixosSystem {
        specialArgs = { inherit inputs; };
         modules = [
-          (./. + "/host" + ("/" + systemSettings.host) + "/configuration.nix")
+          (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "diocaneimpestato";
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = { imports =[ (./. + "/host" + ("/" + systemSettings.host) + "/home.nix")];};
+            home-manager.users.${userSettings.username} = { imports =[ (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")];};
             home-manager.extraSpecialArgs = {inherit inputs ;};
             }
            ];

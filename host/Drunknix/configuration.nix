@@ -9,13 +9,13 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../modules/pipewire.nix
-      ../modules/./nvidia-offload.nix
-#      ./stylix.nix
-      ./hypland.nix
-      ./packages.nix
-      ./zsh.nix
-      ./sddm.nix
+      ../../modules/pipewire.nix
+      ../../modules/./nvidia-offload.nix
+      ../../stylix.nix
+      ../../hypland.nix
+      ../../packages.nix
+      ../../zsh.nix
+      ../../sddm.nix
       ];
  
   #HDD
