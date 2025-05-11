@@ -36,9 +36,17 @@
   	theme = "catppuccin-mocha";
   };
 
-	commonArgs = { inherit systemSettings;
+	commonArgs = {
+            inherit systemSettings;
             inherit userSettings;
-            inherit inputs; config.allowUnfree= true;};
+            inherit inputs;
+            config = {
+            allowUnfree= true;
+            allowUnfreePredicate = true;
+            };
+
+
+      };
 	pkgs = import nixpkgs (commonArgs // {
     overlays = [inputs.hyprpanel.overlay];});
 
