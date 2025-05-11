@@ -42,7 +42,7 @@
 
 	pkgs-unstable = import nixpkgs-unstable commonArgs;
 
-  commonArgs = {
+  pkgs = import nixpkgs = {
      system = systemSettings.system;
      config = {
         allowUnfree= true;
