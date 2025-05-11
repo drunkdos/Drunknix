@@ -22,9 +22,9 @@ nix.settings = {
     pyprland
     hyprpicker
 #    hyprcursor
-#    hyprpaper
-    swww    
-    waypaper
+    hyprpaper
+#    swww
+#    waypaper
     hyprlock
     hypridle
     hyprpolkitagent

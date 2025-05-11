@@ -33,9 +33,9 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "io";
+  	theme = "gruvbox-dark-hard";
   	font = "JetBrainsMonoNerdFont-Regular";
-  	fontPkg = "pkgs.nerdfonts";
+  	fontPkg = pkgs.nerdfonts;
   };
 
 #     pkgs = import nixpkgs commonArgs;
