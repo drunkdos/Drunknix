@@ -44,6 +44,12 @@ in
 
   '';
 
+  home.file = {
+    ".config/hypr/hyprcolor.conf".source = config.lib.stylix.colors {
+      template = builtins.readFile ./colors-hyprland.conf.mustache;
+      extension = ".conf";
+    };
+  };
 
 #   stylix.iconTheme = {
    # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
