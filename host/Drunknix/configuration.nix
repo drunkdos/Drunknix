@@ -11,7 +11,7 @@
       ./hardware-configuration.nix
       ../../modules/pipewire.nix
       ../../modules/nvidia-offload.nix
-      ../../modules/stylix.nix
+      ../../modules/style/stylix.nix
       ../../modules/hypland.nix
       ../../modules/packages.nix
       ../../modules/zsh.nix

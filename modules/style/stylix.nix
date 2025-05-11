@@ -7,7 +7,7 @@ let
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
- # imports = [ inputs.stylix.nixosModules.stylix ];
+
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.polarity = themePolarity;
