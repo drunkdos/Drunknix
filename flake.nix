@@ -37,12 +37,11 @@
   };
 
 	commonArgs = {
-            inherit systemSettings;
+            system = systemSettings.system
             config = {
-            allowUnfree= true;
-            allowUnfreePredicate = true;
-            };
-
+                allowUnfree= true;
+                allowUnfreePredicate = true;
+                };
 
       };
 	pkgs = import nixpkgs (commonArgs // {
