@@ -7,7 +7,7 @@ let
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
-
+  imports = [ ./rofi.nix];
   home.file.".currenttheme".text = userSettings.theme;
   stylix.enable = true;
   stylix.autoEnable = true;
