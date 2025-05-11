@@ -37,9 +37,7 @@
   };
 
 	commonArgs = {
-            inherit systemSettings;
-            inherit userSettings;
-            inherit inputs;
+            inherit system;
             config = {
             allowUnfree= true;
             allowUnfreePredicate = true;
