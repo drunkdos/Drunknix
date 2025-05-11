@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, userSettings, ... }:
+{ lib, pkgs, inputs, userSettings, stylix,... }:
 
 let
   themePath = "../../../themes/"+userSettings.theme+"/"+userSettings.theme+".yaml";
@@ -8,7 +8,7 @@ let
 in
 {
  # imports = [ inputs.stylix.nixosModules.stylix ];
-
+  stylix.enable = true;
   stylix.autoEnable = true;
   stylix.polarity = themePolarity;
   stylix.image = pkgs.fetchurl {

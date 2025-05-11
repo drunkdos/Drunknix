@@ -33,7 +33,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "catppuccin-frappe";
+  	theme = "io";
   	font = "JetBrainsMonoNerdFont-Regular";
   	fontPkg = "pkgs.nerdfonts";
   };
@@ -74,7 +74,9 @@
             home-manager.backupFileExtension = "diocaneimpestato";
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = { imports =[ (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")];};
-            home-manager.extraSpecialArgs = {inherit inputs;};
+            home-manager.extraSpecialArgs = {
+            inherit inputs;
+            inherit userSettings;};
             }
            ];
 

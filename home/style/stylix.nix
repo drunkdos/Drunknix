@@ -9,6 +9,7 @@ in
 {
 
   home.file.".currenttheme".text = userSettings.theme;
+  stylix.enable = true;
   stylix.autoEnable = true;
   stylix.polarity = themePolarity;
   stylix.image = pkgs.fetchurl {
@@ -34,17 +35,9 @@ in
       name = "Noto Emoji";
       package = pkgs.noto-fonts-monochrome-emoji;
     };
-    sizes = {
-      terminal = 18;
-      applications = 12;
-      popups = 12;
-      desktop = 12;
-    };
+
   };
 
-    font.size = config.stylix.fonts.sizes.terminal;
-    font.normal.family = userSettings.font;
-  };
 
    stylix.iconTheme = {
    # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
@@ -68,4 +61,5 @@ in
    home.pointerCursor = {
    	gtk.enable = true;
     x11.enable = true;
+    };
 }
