@@ -37,7 +37,7 @@
   };
 
 	commonArgs = {
-            system = systemSettings.system
+            system = systemSettings.system;
             config = {
                 allowUnfree= true;
                 allowUnfreePredicate = true;
