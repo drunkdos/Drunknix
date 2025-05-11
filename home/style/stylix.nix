@@ -45,12 +45,12 @@ in
   '';
 
 
-   stylix.iconTheme = {
+#   stylix.iconTheme = {
    # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
-     package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
-     dark = "Papirus-Dark"; # used
-     light = "Papirus-Light"; # unused
-    };
+#     package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
+#     dark = "Papirus-Dark"; # used
+#     light = "Papirus-Light"; # unused
+#    };
 
  stylix.cursor = {
        name = "catppuccin-latte-light-cursors";
@@ -59,10 +59,10 @@ in
        };
 
  gtk.enable = true;
- gtk.iconTheme = {
-       name = "Papirus-Dark";
-       package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
-      };
+# gtk.iconTheme = {
+#       name = "Papirus-Dark";
+#       package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
+#      };
 
    home.pointerCursor = {
    	gtk.enable = true;
