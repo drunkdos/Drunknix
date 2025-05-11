@@ -1,0 +1,18 @@
+scheme: "Material-ExtraVivid"
+author: "Drunkdos"
+base00: "212121" #Default Background
+base01: "303030" #Lighter Background
+base02: "353535" #Selection Background
+base03: "4A4A4A" #Comments, Invisibles, Line Highlighting
+base04: "B2CCD6" #Dark Foreground
+base05: "EEFFFF" #Default Foreground, Caret, Delimiters, Operators
+base06: "EEFFFF" #Light Foreground
+base07: "FFFFFF" #Light Background
+base08: "2f4858" #(blue)
+base09: "425481" #(lightblue)
+base0A: "00765e" #(cyan)
+base0B: "7c8a00" #(green)
+base0C: "c18300" #(yellow)
+base0D: "ff7000" #(orange)
+base0E: "ff8455" #(red)
+base0F: "c7478c" #(mauave)
