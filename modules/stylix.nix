@@ -37,6 +37,4 @@ in
 
   stylix.targets.console.enable = true;
 
-  };
-
 }
