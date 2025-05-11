@@ -7,7 +7,7 @@ let
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
-  imports = [ inputs.stylix.nixosModules.stylix ];
+ # imports = [ inputs.stylix.nixosModules.stylix ];
 
   stylix.autoEnable = true;
   stylix.polarity = themePolarity;
@@ -37,8 +37,6 @@ in
 
   stylix.targets.console.enable = true;
 
-  environment.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
 }
