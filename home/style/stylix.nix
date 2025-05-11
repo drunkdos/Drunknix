@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, userSettings, ... }:
+{ config, lib, pkgs, inputs, userSettings, stylix, ... }:
 
 let
   themePath = "../../../themes"+("/"+userSettings.theme+"/"+userSettings.theme)+".yaml";
@@ -45,8 +45,12 @@ in
   '';
 
   home.file = {
+   ".config/qt5ct/colors/oomox-current.conf".source = config.lib.stylix.colors {
+      template = builtins.readFile ./oomox-current.conf.mustache;
+      extension = ".conf";
+    };
     ".config/hypr/hyprcolor.conf".source = config.lib.stylix.colors {
-      template = builtins.readFile ./colors-hyprland.conf.mustache;
+      template = builtins.readFile ./hyprcolor.conf.mustache;
       extension = ".conf";
     };
   };
@@ -61,7 +65,7 @@ in
  stylix.cursor = {
        name = "catppuccin-latte-light-cursors";
        package = pkgs.catppuccin-cursors.latteLight;
-       size = 30;
+       size = 32;
        };
 
  gtk.enable = true;
