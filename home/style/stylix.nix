@@ -45,9 +45,9 @@ in
   '';
 
   home.file = {
-   ".config/qt5ct/colors/oomox-current.conf".source = config.lib.stylix.colors {
-      template = builtins.readFile ./oomox-current.conf.mustache;
-      extension = ".conf";
+   ".config/hyprpanel/hyprpaneltheme.json".source = config.lib.stylix.colors {
+      template = builtins.readFile ./hyprpaneltheme.json.mustache;
+      extension = ".json";
     };
     ".config/hypr/hyprcolor.conf".source = config.lib.stylix.colors {
       template = builtins.readFile ./hyprcolor.conf.mustache;
