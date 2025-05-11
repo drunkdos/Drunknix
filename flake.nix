@@ -33,7 +33,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "gruvbox-dark-hard";
+  	theme = "catppuccin-mocha";
   	font = "JetBrainsMonoNerdFont-Regular";
   	fontPkg = pkgs.nerdfonts;
   };
