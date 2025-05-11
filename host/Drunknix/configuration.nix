@@ -10,12 +10,12 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/pipewire.nix
-      ../../modules/./nvidia-offload.nix
-      ../../stylix.nix
-      ../../hypland.nix
-      ../../packages.nix
-      ../../zsh.nix
-      ../../sddm.nix
+      ../../modules/nvidia-offload.nix
+      ../../modules/stylix.nix
+      ../../modules/hypland.nix
+      ../../modules/packages.nix
+      ../../modules/zsh.nix
+      ../../modules/sddm.nix
       ];
  
   #HDD
