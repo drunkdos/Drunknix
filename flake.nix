@@ -8,7 +8,7 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
    # home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    
+
     stylix = {
       url = "github:danth/stylix/release-24.11";
 #      url = "github:danth/stylix";
@@ -33,31 +33,40 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "catppuccin-mocha";
+  	theme = "catppuccin-frappe";
+  	font = "JetBrainsMonoNerdFont-Regular";
+  	fontPkg = "pkgs.nerdfonts";
   };
 
-     pkgs = import nixpkgs commonArgs;
+#     pkgs = import nixpkgs commonArgs;
 #	pkgs = import nixpkgs (commonArgs // {
 #    overlays = [inputs.hyprpanel.overlay];});
 
-	pkgs-unstable = import nixpkgs-unstable commonArgs;
 
-  pkgs = import nixpkgs = {
+  pkgs = import nixpkgs {
      system = systemSettings.system;
      config = {
-        allowUnfree= true;
-        allowUnfreePredicate = true;
+        allowUnfree = true;
+        allowUnfreePredicate = (_: true);
         };
+
      };
-    lib = nixpkgs.lib;
+	pkgs-unstable = import nixpkgs-unstable{
+	 system = systemSettings.system;
+     config = {
+        allowUnfree = true;
+        allowUnfreePredicate = (_: true);
+        };};
+
+	lib = nixpkgs.lib;
 
   in
 
    {
     nixosConfigurations.Drunknix= lib.nixosSystem {
-       specialArgs = { inherit inputs; };
-        modules = [
+       modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {
@@ -65,12 +74,16 @@
             home-manager.backupFileExtension = "diocaneimpestato";
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = { imports =[ (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")];};
-            home-manager.extraSpecialArgs = {inherit inputs ;};
+            home-manager.extraSpecialArgs = {inherit inputs;};
             }
            ];
-          
-          
-        specialArgs = { inherit pkgs-unstable;  }; 
+
+
+        specialArgs = {
+        inherit inputs;
+        inherit systemSettings;
+        inherit userSettings;
+        inherit pkgs-unstable;  };
       };
     };
   }

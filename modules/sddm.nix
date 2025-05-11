@@ -12,7 +12,7 @@ pkgs.sddm-astronaut.override {
   themeConfig = {
     "Font" = "JetBrainsMono";
     "FontSize" = "12";
-    "Background" = "${./wallpaper.png}";
+#    "Background" = "${./wallpaper.png}";
     "FormPosition"="left";
 
   };
