@@ -36,22 +36,22 @@
   	theme = "catppuccin-mocha";
   };
 
-	commonArgs = {
-            system = systemSettings.system;
-            config = {
-                allowUnfree= true;
-                allowUnfreePredicate = true;
-                };
+     pkgs = import nixpkgs commonArgs
+#	pkgs = import nixpkgs (commonArgs // {
+#    overlays = [inputs.hyprpanel.overlay];});
 
-      };
-	pkgs = import nixpkgs (commonArgs // {
-    overlays = [inputs.hyprpanel.overlay];});
-
-  
 	pkgs-unstable = import nixpkgs-unstable commonArgs;
+
+  commonArgs = {
+     system = systemSettings.system;
+     config = {
+        allowUnfree= true;
+        allowUnfreePredicate = true;
+        };
+     };
     lib = nixpkgs.lib;
 
-  in 
+  in
 
    {
     nixosConfigurations.Drunknix= lib.nixosSystem {
