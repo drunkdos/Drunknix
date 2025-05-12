@@ -33,7 +33,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "catppuccin-mocha";
+  	theme = "gruvbox-dark-hard";
   	font = "JetBrainsMonoNerdFont-Regular";
   	fontPkg = pkgs.nerdfonts;
   };
@@ -79,8 +79,6 @@
             inherit userSettings;};
             }
            ];
-
-
         specialArgs = {
         inherit inputs;
         inherit systemSettings;
