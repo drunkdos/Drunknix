@@ -52,7 +52,7 @@ in
       template = builtins.readFile ./hyprcolor.conf.mustache;
       extension = ".conf";
     };
-     ".local/share/rofi/rofi.rasi".source = config.lib.stylix.colors {
+     ".local/share/rofi/themes/rofi.rasi".source = config.lib.stylix.colors {
       template = builtins.readFile ./rofi.rasi.mustache;
       extension = ".rasi";
     };
