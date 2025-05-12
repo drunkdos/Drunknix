@@ -67,7 +67,8 @@
     nixosConfigurations.Drunknix= lib.nixosSystem {
        modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay
+          ././overlays/default.nix];}
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {

@@ -9,7 +9,9 @@
   modifications = final: prev: {
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
-    # });
+    # })
+    papirusOrange =
+    prev.papirus-icon-theme.override{color = "deeporange";};
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

@@ -42,7 +42,7 @@
     jdk23
     inputs.zen-browser.packages."${system}".default #zenbrowser temp flake
     imagemagick
-    micro
+    micro-full
     pywal16
 
   #System App
@@ -87,7 +87,7 @@
     kdePackages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
-
+    papirusOrange
     materia-kde-theme
     catppuccin-cursors.latteLight
 
