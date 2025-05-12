@@ -22,14 +22,15 @@
 
      zen-browser.url = "github:0xc000022070/zen-browser-flake";
 };
-  outputs = { self, nixpkgs, nixpkgs-unstable, hyprland,
-               home-manager, stylix, nix-flatpak,  ... }@inputs :
+  outputs = { self, nixpkgs, nixpkgs-unstable, hyprland, home-manager, stylix, nix-flatpak,  ... }@inputs :
 
   let
+#systemSettings
   systemSettings = {
    	system = "x86_64-linux";
    	hostname = "Drunknix";
    	};
+#userSettings
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";

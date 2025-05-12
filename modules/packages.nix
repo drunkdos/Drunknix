@@ -8,9 +8,6 @@
   services.desktopManager.plasma6.enable = true;
 
   programs.firefox.enable = true;          # Install firefox.
-  services.logmein-hamachi.enable = true; # Hamachi servies
-  programs.haguichi.enable = true;        # Hamachi client
-
   programs.dconf.enable = true;
   security.rtkit.enable = true; 
 
@@ -78,7 +75,7 @@
     alacritty
     kitty
     amule
-    calibre
+    ferdium
 
     protonup-qt
     protontricks

@@ -16,6 +16,7 @@
       ../../modules/packages.nix
       ../../modules/zsh.nix
       ../../modules/sddm.nix
+      ../../modules/hamachi.nix
       ];
  
   #HDD
