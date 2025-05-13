@@ -42,6 +42,7 @@
     jdk23
     inputs.zen-browser.packages."${system}".default #zenbrowser temp flake
     imagemagick
+    gowall
     micro-full
     pywal16
 
