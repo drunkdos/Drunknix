@@ -11,7 +11,8 @@
     # ...
     # })
     papirusOrange =
-    prev.papirus-icon-theme.override{color = "deeporange";};
+    prev.papirus-icon-theme.overrideAttrs (oldAttrs: rec {
+    color = "deeporange";});
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

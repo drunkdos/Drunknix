@@ -87,7 +87,6 @@
     kdePackages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
-    papirusOrange
     materia-kde-theme
     catppuccin-cursors.latteLight
 

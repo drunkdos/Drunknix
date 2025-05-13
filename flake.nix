@@ -50,8 +50,8 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         };
+    };
 
-     };
 	pkgs-unstable = import nixpkgs-unstable{
 	 system = systemSettings.system;
      config = {
@@ -67,8 +67,7 @@
     nixosConfigurations.Drunknix= lib.nixosSystem {
        modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay
-          ././overlays/default.nix];}
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {

@@ -56,6 +56,10 @@ in
       template = builtins.readFile ./rofi.rasi.mustache;
       extension = ".rasi";
     };
+     ".config/gowall/config.yml".source = config.lib.stylix.colors {
+      template = builtins.readFile ./gowal-config.yml.mustache;
+      extension = ".yml";
+    };
   };
 
 #   stylix.iconTheme = {
@@ -81,4 +85,7 @@ in
    	gtk.enable = true;
     x11.enable = true;
     };
+
+   home.packages = with pkgs; [
+  ];
 }
