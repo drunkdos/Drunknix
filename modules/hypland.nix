@@ -24,7 +24,7 @@ nix.settings = {
 #    hyprcursor
     hyprpaper
 #    swww
-#    waypaper
+    waypaper
     hyprlock
     hypridle
     hyprpolkitagent
