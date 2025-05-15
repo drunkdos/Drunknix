@@ -42,7 +42,6 @@
     jdk23
     inputs.zen-browser.packages."${system}".default #zenbrowser temp flake
     imagemagick
-    gowall
     micro-full
     pywal16
 
@@ -104,7 +103,8 @@
     heroic
     prismlauncher
     hellwal
-
+    gowall
+    anydesk
 
     (discord.override {
           # remove any overrides that you don't want
