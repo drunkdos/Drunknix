@@ -30,7 +30,8 @@ nix.settings = {
     hyprpolkitagent
     hyprpanel
     hyprshot
-    
+    waybar
+
     cliphist
     clipse
     wl-clipboard

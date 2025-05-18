@@ -60,6 +60,10 @@ in
       template = builtins.readFile ./gowal-config.yml.mustache;
       extension = ".yml";
     };
+     ".config/waybar/color.css".source = config.lib.stylix.colors {
+      template = builtins.readFile ./waybar-colors.css.mustache;
+      extension = ".css";
+    };
   };
 
 #   stylix.iconTheme = {
