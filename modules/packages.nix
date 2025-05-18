@@ -96,7 +96,7 @@
   #unstable packages
     (with pkgs-unstable; [
     mcontrolcenter
-    rofi-wayland 
+#    rofi-wayland
     fastfetch
     vesktop
     r2modman
