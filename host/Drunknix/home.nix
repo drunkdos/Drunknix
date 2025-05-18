@@ -3,7 +3,9 @@
 {
   home.username = "drunk";
   home.homeDirectory = "/home/drunk";
-  imports = [ ../../home/style/stylix.nix];
+  imports = [ ../../home/style/stylix.nix
+   ../../home/
+  ];
 
   home.stateVersion = "24.05"; # Do not change.
 
