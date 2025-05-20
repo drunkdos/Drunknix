@@ -17,6 +17,10 @@ in
   };
   stylix.base16Scheme = ./. + themePath;
 
+  stylix.targets = {
+  fuzzel.enable = false;
+  };
+
   stylix.fonts = {
     monospace = {
       name = userSettings.font;
@@ -91,5 +95,6 @@ in
     };
 
    home.packages = with pkgs; [
+   catppuccin-papirus-folders
   ];
 }

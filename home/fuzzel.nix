@@ -14,7 +14,7 @@ in
           input = "${base05-hex}ff";
           match = "${base0A-hex}ff";
           selection = "${base03-hex}ff";
-          selection-text = "${base0D-hex}ff";
+          selection-text =  "${base0D-hex}ff";
           selection-match = "${base0A-hex}ff";
           counter = "${base06-hex}ff";
           border = "${base0D-hex}ff";
@@ -25,8 +25,7 @@ in
           dpi-aware = "no" ;
           icons-enabled= "yes" ;
           icons-theme= "Papirus" ;
-          match-mode="fuzzy";
-
+          match-mode="fzf";
         };
       };
     };

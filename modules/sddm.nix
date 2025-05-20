@@ -1,19 +1,81 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
-{  services.displayManager.sddm= {
-  enable = true;
-  wayland.enable = true;
-  theme = "sddm-astronaut-theme";
-  };
+{ lib, pkgs, inputs, userSettings, stylix,config,... }:
 
+let
+  themePath = "../../../themes/"+userSettings.theme+"/"+userSettings.theme+".yaml";
+  themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/polarity.txt"));
+  backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
+  backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
+  in
+
+{
+
+  services.displayManager.sddm= {
+    enable = true;
+    wayland.enable = true;
+    theme = "sddm-astronaut-theme";
+    settings = {
+        Theme = {
+          CursorTheme = config.stylix.cursor.name;
+          CursorSize = config.stylix.cursor.size;
+        };
+    };
+  };
   services.displayManager.sddm.package = lib.mkDefault pkgs.kdePackages.sddm;
 
-environment.systemPackages = [(
-pkgs.sddm-astronaut.override {
-  themeConfig = {
-    "Font" = "JetBrainsMono";
-    "FontSize" = "12";
-#    "Background" = "${./wallpaper.png}";
-    "FormPosition"="left";
+  environment.systemPackages = [(
+  pkgs.sddm-astronaut.override {
+    themeConfig = with config.lib.stylix.colors.withHashtag; {
+      Font = "JetBrainsMono";
+      FontSize = "12";
+      Background = "${config.stylix.image}";
+          CropBackground = "false";
+          BackgroundHorizontalAlignment = "center";
+          BackgroundVerticalAlignment = "center";
+          DimBackground = "0.0";
+          HeaderTextColor = "${base07}";
+          DateTextColor = "${base07}";
+          TimeTextColor = "${base07}";
+
+          FormBackgroundColor = "${base00}";
+          BackgroundColor = "${base00}";
+          DimBackgroundColor = "${base00}";
+
+          LoginFieldBackgroundColor = "#${base00}";
+          PasswordFieldBackgroundColor = "${base00}";
+          LoginFieldTextColo = "${base0D}";
+          PasswordFieldTestColor = "${base0D}";
+          UserIconColor = "${base0D}";
+          PasswordIconColor = "${base0D}";
+
+          PlaceholderTextColor = "${base02}";
+          WarningColor = "${base0A}";
+
+          LoginButtonTextColor = "${base0D}";
+          LoginButtonBackgroundColor = "${base00}";
+          SystemButtonsIconsColor = "${base0D}";
+          SessionButtonTextColor = "${base0D}";
+          VirtualKeyboardButtonTextColor = "${base0D}";
+
+          DropdownTextColor = "${base0D}";
+          DropdownSelectedBackgroundColor = "${base00}";
+          DropdownBackgroundColor = "${base00}";
+
+          HighlightTextColor = "${base0D}";
+          HighlightBackgroundColor = "${base0D}";
+          HighlightBorderColor = "${base0D}";
+
+          HoverUserIconColor = "${base0A}";
+          HoverPasswordIconColor = "${base0A}";
+          HoverSystemButtonsIconsColor = "${base0A}";
+          HoverSessionButtonTextColor = "${base0A}";
+          HoverVirtualKeyboardButtonTextColor = "${base0A}";
+
+          PartialBlur = "true";
+          BlurMax = "35";
+          Blur = "2.0";
+
+          HaveFormBackground = "false";
+          FormPosition = "left";
 
   };
 }

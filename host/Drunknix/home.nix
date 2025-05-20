@@ -3,7 +3,8 @@
 {
   home.username = "drunk";
   home.homeDirectory = "/home/drunk";
-  imports = [ ../../home/style/stylix.nix
+  imports = [
+   ../../home/style/stylix.nix
    ../../home/rofi.nix
    ../../home/fuzzel.nix
 
