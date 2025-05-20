@@ -105,6 +105,7 @@
     hellwal
     gowall
     anydesk
+    rclone
 
     (discord.override {
           # remove any overrides that you don't want
