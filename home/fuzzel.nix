@@ -1,8 +1,8 @@
- { config, lib, stylix... }:
+ { config, lib, stylix,... }:
 let
   opacity = lib.toHexString (builtins.ceil (config.stylix.opacity.popups * 255));
 in
-
+{
     programs.fuzzel = {
         enable = true;
         settings = {
@@ -14,14 +14,19 @@ in
           input = "${base05-hex}ff";
           match = "${base0A-hex}ff";
           selection = "${base03-hex}ff";
-          selection-text = "${base05-hex}ff";
+          selection-text = "${base0D-hex}ff";
           selection-match = "${base0A-hex}ff";
           counter = "${base06-hex}ff";
           border = "${base0D-hex}ff";
         };
 
         main = {
-          font = "${config.stylix.fonts.sansSerif.name}:size=${toString gconfig.stylix.fonts.sizes.popups}";
+          font = "${config.stylix.fonts.sansSerif.name}:size=16";
+          dpi-aware = "no" ;
+          icons-enabled= "yes" ;
+          icons-theme= "Papirus" ;
+          match-mode="fuzzy";
+
         };
       };
     };

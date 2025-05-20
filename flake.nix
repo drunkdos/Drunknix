@@ -34,7 +34,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "everforest";
+  	theme = "fairy-floss";
   	font = "JetBrainsMonoNerdFont-Regular";
   	fontPkg = pkgs.nerdfonts;
   };
