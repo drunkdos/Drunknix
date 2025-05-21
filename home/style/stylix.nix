@@ -6,12 +6,14 @@ let
   backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 
-    Vesktoptemplate = import ./vesktop.nix {
-    inherit (config.lib.stylix) colors;
-    inherit (config.stylix) fonts;
-    };
 in
 {
+
+  imports = [
+   ./vesktop.nix
+
+  ];
+
   home.file.".currenttheme".text = userSettings.theme;
   stylix.enable = true;
   stylix.autoEnable = true;
@@ -24,7 +26,8 @@ in
 
   stylix.targets = {
   fuzzel.enable = false;
-  vesktop.enable = false ;
+  vesktop.enable = false;
+  MYvesktop.enable = true;
   };
 
   stylix.fonts = {

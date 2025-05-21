@@ -24,19 +24,7 @@
   environment.systemPackages = (
   with pkgs; [
   #stable packages
-    cmake meson cpio
-    wayland-utils
-    vulkan-tools
-    rar
-    zip
-    unzip
-    wget
-    fzf
-    curl
-    busybox
-    nano
-    rnnoise-plugin
-    brightnessctl
+
     themix-gui
     jdk23
     inputs.zen-browser.packages."${system}".default #zenbrowser temp flake
@@ -69,16 +57,12 @@
     kate
     freeoffice
     onlyoffice-desktopeditors
-    airshipper
     alacritty
     kitty
     amule
     ferdium
 
-    protonup-qt
-    protontricks
-	lutris
- 	steamtinkerlaunch
+
  	
   #THEMING
     libsForQt5.qt5ct
@@ -95,50 +79,19 @@
     (with pkgs-unstable; [
     mcontrolcenter
 #    rofi-wayland
-    fastfetch
     vesktop
-    r2modman
-    heroic
-    prismlauncher
-    hellwal
-    gowall
     anydesk
     rclone
-
-    (discord.override {
-          # remove any overrides that you don't want
-         withOpenASAR = true;
-         withVencord = true;
-        })
  ]);
 
 
-  #steamsettings
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    gamescopeSession.enable = true;
-    };
 
   #Fonts
     fonts.fontDir.enable = true;
     fonts.packages = with pkgs; [
 	nerdfonts
-        scientifica
+    scientifica
       ];
 
-  services.flatpak.enable = true;
-  services.flatpak.packages = [
-   "org.upscayl.Upscayl"
-   "org.jdownloader.JDownloader"
-   "net.waterfox.waterfox" 
-   "net.retrodeck.retrodeck"
-   "io.github.ryubing.Ryujinx"
-   "com.obsproject.Studio"
-   "org.kde.krita"
-   "org.DolphinEmu.dolphin-emu"
-   "tv.kodi.Kodi"
-    ];
 }
 

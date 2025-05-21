@@ -42,4 +42,7 @@ in
 
 {
 services.pipewire.extraConfig.pipewire."99-input-denoising" = pw_rnnoise_config;
+ environment.systemPackages = with pkgs; [
+ rnnoise-plugin
+];
 }

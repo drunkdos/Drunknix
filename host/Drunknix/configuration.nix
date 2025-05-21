@@ -17,6 +17,10 @@
       ../../modules/shell.nix
       ../../modules/sddm.nix
       ../../modules/hamachi.nix
+      ../../modules/shell.nix
+      ../../modules/games.nix
+      ../../modules/flatpak.nix
+
       ];
  
   #HDD

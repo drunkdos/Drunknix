@@ -1,11 +1,5 @@
 { lib, pkgs, inputs, userSettings, stylix,config,... }:
 
-let
-  themePath = "../../../themes/"+userSettings.theme+"/"+userSettings.theme+".yaml";
-  themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/polarity.txt"));
-  backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
-  backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
-  in
 
 {
 
