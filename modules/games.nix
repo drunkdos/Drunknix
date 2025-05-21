@@ -26,7 +26,7 @@
     prismlauncher
 
       ]);
-}
+
 
 
   services.flatpak.packages = [
