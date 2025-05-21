@@ -5,6 +5,10 @@ let
   themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/polarity.txt"));
   backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
+
+    Vesktoptemplate = import ./vesktop.nix {
+    inherit (config.lib.stylix) colors;
+    inherit (config.stylix) fonts;
 in
 {
   home.file.".currenttheme".text = userSettings.theme;
@@ -19,6 +23,7 @@ in
 
   stylix.targets = {
   fuzzel.enable = false;
+  vesktop.enable = false ;
   };
 
   stylix.fonts = {
@@ -68,6 +73,8 @@ in
       template = builtins.readFile ./waybar-colors.css.mustache;
       extension = ".css";
     };
+   "Vencord/themes/stylix.theme.css".text =
+                      Vesktoptemplate + config.stylix.targets.nixcord.extraCss;
   };
 
 #   stylix.iconTheme = {
