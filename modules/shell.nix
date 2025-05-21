@@ -4,7 +4,9 @@
 users.defaultUserShell = pkgs.fish;
 
 programs.fish.enable = true;
- environment.systemPackages = ( with pkgs; [
+
+environment.systemPackages = ( with pkgs; [
+    btop powertop
     wayland-utils
     vulkan-tools
     rar zip unzip
@@ -12,19 +14,14 @@ programs.fish.enable = true;
     fzf
     curl
     micro-full
-    rnnoise-plugin
     brightnessctl
-    themix-gui
     jdk23
-    imagemagick
     pywal16
       ])
  ++ (with pkgs-unstable; [
   #unstable packages
     fastfetch
-    hellwal
     gowall
     rclone
-
       ]);
 }
