@@ -25,7 +25,6 @@
   with pkgs; [
   #stable packages
     cmake meson cpio
-    base16-schemes
     wayland-utils
     vulkan-tools
     rar
@@ -61,7 +60,6 @@
     kdePackages.ark
     kdePackages.knewstuff
     kdePackages.kio-gdrive
-    python312Packages.kde-material-you-colors
 
   #User App
     mission-center

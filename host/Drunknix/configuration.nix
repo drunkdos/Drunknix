@@ -14,7 +14,7 @@
       ../../modules/style/stylix.nix
       ../../modules/hypland.nix
       ../../modules/packages.nix
-      ../../modules/zsh.nix
+      ../../modules/shell.nix
       ../../modules/sddm.nix
       ../../modules/hamachi.nix
       ];
