@@ -9,6 +9,7 @@ let
     Vesktoptemplate = import ./vesktop.nix {
     inherit (config.lib.stylix) colors;
     inherit (config.stylix) fonts;
+    };
 in
 {
   home.file.".currenttheme".text = userSettings.theme;
@@ -73,9 +74,7 @@ in
       template = builtins.readFile ./waybar-colors.css.mustache;
       extension = ".css";
     };
-   "Vencord/themes/stylix.theme.css".text =
-                      Vesktoptemplate + config.stylix.targets.nixcord.extraCss;
-  };
+   };
 
 #   stylix.iconTheme = {
    # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
