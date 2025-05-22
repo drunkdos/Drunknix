@@ -38,8 +38,8 @@ in
   stylix.targets.console.enable = true;
 
   stylix.cursor = {
-          package=pkgs.catppuccin-cursors.latteLight;
-          name="catppuccin-latte-light-cursors";
+          name = userSettings.cursor;
+       package = userSettings.cursorPkg;
           size= 30;
           };
 }

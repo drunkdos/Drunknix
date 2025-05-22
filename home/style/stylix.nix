@@ -86,8 +86,8 @@ in
 #    };
 
  stylix.cursor = {
-       name = "catppuccin-latte-light-cursors";
-       package = pkgs.catppuccin-cursors.latteLight;
+       name = userSettings.cursor;
+       package = userSettings.cursorPkg;
        size = 30;
        };
 
@@ -99,6 +99,7 @@ in
 
    home.pointerCursor = {
     enable = true;
+    name = userSettings.cursor;
     size = 30;
     gtk.enable = true;
     x11.enable = true;
