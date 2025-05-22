@@ -40,6 +40,6 @@ in
   stylix.cursor = {
           name = userSettings.cursor;
        package = userSettings.cursorPkg;
-          size= 30;
+          size= userSettings.cursorSize;
           };
 }

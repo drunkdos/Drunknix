@@ -37,8 +37,9 @@
   	theme = "spaceduck";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
-  	cursor = "catppuccin-latte-light-cursors";
-  	cursoPkg = pkgs.catppuccin-cursors.latteLight;
+  	cursor = "CatppuccinLatte Light";
+  	cursorPkg = pkgs.catppuccin-cursors.latteLight;
+  	cursorSize = 32;
   };
 
 #     pkgs = import nixpkgs commonArgs;

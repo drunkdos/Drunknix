@@ -88,7 +88,7 @@ in
  stylix.cursor = {
        name = userSettings.cursor;
        package = userSettings.cursorPkg;
-       size = 30;
+       size = userSettings.cursorSize;
        };
 
  gtk.enable = true;
@@ -100,12 +100,12 @@ in
    home.pointerCursor = {
     enable = true;
     name = userSettings.cursor;
-    size = 30;
+    size = userSettings.cursorSize;
     gtk.enable = true;
     x11.enable = true;
     hyprcursor = {
       enable = true;
-      size = 30;
+      size = userSettings.cursorSize;
       };
     };
 
