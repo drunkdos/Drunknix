@@ -30,11 +30,16 @@ in
       package = userSettings.fontPkg;
     };
     emoji = {
-      name = "Noto Color Emoji";
-      package = pkgs.noto-fonts-emoji-blob-bin;
+      name = "Noto Emoji";
+      package = pkgs.noto-fonts-color-emoji;
     };
   };
 
   stylix.targets.console.enable = true;
 
+  stylix.cursor = {
+          package=pkgs.catppuccin-cursors.latteLight;
+          name="catppuccin-latte-light-cursors";
+          size= 30;
+          };
 }

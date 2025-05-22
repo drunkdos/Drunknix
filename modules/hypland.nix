@@ -21,7 +21,7 @@ nix.settings = {
   environment.systemPackages = with pkgs; [
     pyprland
     hyprpicker
-#    hyprcursor
+    hyprcursor
     hyprpaper
 #    swww
     waypaper

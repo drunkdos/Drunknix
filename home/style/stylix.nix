@@ -45,16 +45,15 @@ in
     };
     emoji = {
       name = "Noto Emoji";
-      package = pkgs.noto-fonts-monochrome-emoji;
+      package = pkgs.noto-fonts-color-emoji;
     };
 
   };
-  home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = ''+config.stylix.image+''
-
-    wallpaper = ,''+config.stylix.image+''
-
-  '';
+#  home.file.".config/hypr/hyprpaper.conf".text = ''
+#    preload = ''+config.stylix.image+''
+#    wallpaper = ,''+config.stylix.image+''
+#
+#  '';
 
   home.file = {
    ".config/hyprpanel/hyprpaneltheme.json".source = config.lib.stylix.colors {
@@ -89,7 +88,7 @@ in
  stylix.cursor = {
        name = "catppuccin-latte-light-cursors";
        package = pkgs.catppuccin-cursors.latteLight;
-       size = 32;
+       size = 30;
        };
 
  gtk.enable = true;
@@ -99,8 +98,14 @@ in
 #      };
 
    home.pointerCursor = {
-   	gtk.enable = true;
+    enable = true;
+    size = 30;
+    gtk.enable = true;
     x11.enable = true;
+    hyprcursor = {
+      enable = true;
+      size = 30;
+      }
     };
 
    home.packages = with pkgs; [

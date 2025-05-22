@@ -1,5 +1,5 @@
-{inputs, config, home-manager,stylix, pkgs, lib, ... }:
-
+	{inputs, config, home-manager,stylix, pkgs, lib, ... }:
+		
 {
   home.username = "drunk";
   home.homeDirectory = "/home/drunk";

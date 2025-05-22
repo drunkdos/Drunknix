@@ -35,7 +35,6 @@
  home.packages = with pkgs; [
       rofi-bluetooth
       rofi-emoji-wayland
-      networkmanager_dmenu
   ];
 
 }

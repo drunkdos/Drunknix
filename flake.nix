@@ -2,20 +2,20 @@
   description = "DrunkNix flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.11";
+    nixpkgs.url = "nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.url = "github:nix-community/home-manager/release-25.05";
    # home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix = {
-      url = "github:danth/stylix/release-24.11";
+      url = "github:danth/stylix/release-25.05";
 #      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
      };
 
-     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.5.2";
+     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
 
      hyprland.url = "github:hyprwm/Hyprland";
      hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
@@ -35,8 +35,8 @@
   	username = "drunk";
   	name = "Drunkdos";
   	theme = "spaceduck";
-  	font = "JetBrainsMonoNerdFont-Regular";
-  	fontPkg = pkgs.nerdfonts;
+  	font = "JetBrainsMonoNerdFont";
+  	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   };
 
 #     pkgs = import nixpkgs commonArgs;

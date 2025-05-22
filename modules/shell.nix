@@ -23,5 +23,7 @@ environment.systemPackages = ( with pkgs; [
     fastfetch
     gowall
     rclone
+    yazi
+    neovim
       ]);
 }

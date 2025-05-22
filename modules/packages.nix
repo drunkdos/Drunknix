@@ -25,15 +25,10 @@
   with pkgs; [
   #stable packages
 
-    themix-gui
-    jdk23
     inputs.zen-browser.packages."${system}".default #zenbrowser temp flake
-    imagemagick
-    micro-full
-    pywal16
+
 
   #System App
-    ranger
     blueman
     pavucontrol
     kdePackages.partitionmanager
@@ -54,7 +49,7 @@
     easyeffects
     keepassxc
     mpv
-    kate
+    kdePackages.kate
     freeoffice
     onlyoffice-desktopeditors
     alacritty
@@ -63,7 +58,7 @@
     ferdium
 
 
- 	
+
   #THEMING
     libsForQt5.qt5ct
     kdePackages.qt6ct
@@ -71,8 +66,9 @@
     kdePackages.qtstyleplugin-kvantum
     materia-kde-theme
     catppuccin-cursors.latteLight
+    themix-gui
 
-    pywalfox-native #firfox-pywal serve per add-on 
+    pywalfox-native #firfox-pywal serve per add-on
   ])
  ++
   #unstable packages
@@ -89,7 +85,7 @@
   #Fonts
     fonts.fontDir.enable = true;
     fonts.packages = with pkgs; [
-	nerdfonts
+	nerd-fonts.jetbrains-mono
     scientifica
       ];
 
