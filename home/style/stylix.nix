@@ -105,7 +105,7 @@ in
     hyprcursor = {
       enable = true;
       size = 30;
-      }
+      };
     };
 
    home.packages = with pkgs; [
