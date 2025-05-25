@@ -43,6 +43,7 @@
     kdePackages.ark
     kdePackages.knewstuff
     kdePackages.kio-gdrive
+    kdePackages.qtmultimedia
 
   #User App
     mission-center

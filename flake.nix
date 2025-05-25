@@ -37,10 +37,12 @@
   	theme = "spaceduck";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
-  	cursor = "CatppuccinLatte Light";
-  	cursorPkg = pkgs.catppuccin-cursors.latteLight;
+  	cursor = "phinger-cursors-light";
+  	cursorPkg = pkgs.phinger-cursors;
   	cursorSize = 32;
   };
+  name = ;
+  package = pkgs.phinger-cursors;
 
 #     pkgs = import nixpkgs commonArgs;
 #	pkgs = import nixpkgs (commonArgs // {
