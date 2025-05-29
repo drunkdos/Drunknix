@@ -46,26 +46,21 @@
     kdePackages.qtmultimedia
 
   #User App
-    mission-center
+    better-control
     easyeffects
     keepassxc
     mpv
     kdePackages.kate
     freeoffice
     onlyoffice-desktopeditors
-    alacritty
     kitty
     amule
-    ferdium
-
-
 
   #THEMING
     libsForQt5.qt5ct
     kdePackages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
-    materia-kde-theme
     catppuccin-cursors.latteLight
     themix-gui
 
