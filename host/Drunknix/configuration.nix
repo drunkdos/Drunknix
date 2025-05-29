@@ -10,7 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/pipewire.nix
-      ../../modules/nvidia-offload.nix
+      ../../modules/nvidia-sync.nix
       ../../modules/style/stylix.nix
       ../../modules/hypland.nix
       ../../modules/packages.nix
