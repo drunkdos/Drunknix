@@ -34,15 +34,14 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "spaceduck";
+  	theme = "darkmoss";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "phinger-cursors-light";
   	cursorPkg = pkgs.phinger-cursors;
   	cursorSize = 32;
   };
-  name = ;
-  package = pkgs.phinger-cursors;
+
 
 #     pkgs = import nixpkgs commonArgs;
 #	pkgs = import nixpkgs (commonArgs // {
