@@ -32,6 +32,7 @@
     blueman
     pavucontrol
     kdePackages.partitionmanager
+	mediawriter
     kdePackages.kirigami
     kdePackages.ktorrent
     kdePackages.dolphin
