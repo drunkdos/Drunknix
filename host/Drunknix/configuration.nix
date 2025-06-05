@@ -10,7 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/pipewire.nix
-      ../../modules/nvidia-sync.nix
+      ../../modules/nvidia-offload.nix
       ../../modules/style/stylix.nix
       ../../modules/hypland.nix
       ../../modules/packages.nix
@@ -28,6 +28,12 @@
       device = "/dev/disk/by-uuid/76445cd8-7a2c-4613-84d2-1452d351f3fc";
       fsType = " btrfs";
     };
+
+  hardware.openrazer.enable = true;
+  environment.systemPackages = with pkgs; [
+      openrazer-daemon
+      razergenie
+   ];
 
 
   #Bootloader
@@ -125,7 +131,7 @@
   users.users.drunk = {
     isNormalUser = true;
     description = "Drunkdos";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "openrazer" "audio"];
     packages = with pkgs; [];
   };
 
