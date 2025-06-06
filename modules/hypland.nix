@@ -23,16 +23,13 @@ nix.settings = {
     hyprpicker
     hyprcursor
     hyprpaper
-#    swww
     waypaper
     hyprlock
     hypridle
     hyprpolkitagent
-    hyprpanel
     hyprshot
     waybar
 
-    cliphist
     clipse
     wl-clipboard
   ];

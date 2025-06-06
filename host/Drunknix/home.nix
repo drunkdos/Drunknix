@@ -5,8 +5,7 @@
   home.homeDirectory = "/home/drunk";
   imports = [
    ../../home/style/stylix.nix
-   ../../home/rofi.nix
-   ../../home/fuzzel.nix
+   ../../home/hyprland.nix
 
   ];
 

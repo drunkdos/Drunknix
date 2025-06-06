@@ -6,9 +6,11 @@ users.defaultUserShell = pkgs.fish;
 programs.fish.enable = true;
 
 environment.systemPackages = ( with pkgs; [
-    btop powertop
+    btop powertop #TASKMANAGER
+    caligula #BootableUSB
     wayland-utils
     vulkan-tools
+    libnotify
     rar zip unzip
     wget
     fzf
