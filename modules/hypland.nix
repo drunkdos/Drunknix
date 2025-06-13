@@ -29,9 +29,8 @@ nix.settings = {
     hyprpolkitagent
     hyprshot
     waybar
-
-    clipse
     wl-clipboard
+    clipse
   ];
 
 }
