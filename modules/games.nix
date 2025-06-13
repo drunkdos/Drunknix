@@ -13,6 +13,9 @@
     environment.systemPackages = ( with pkgs; [
     protonup-qt
     protontricks
+    wine
+    wine64
+    winetricks
     lutris
     steamtinkerlaunch
     airshipper
