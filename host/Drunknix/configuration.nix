@@ -20,6 +20,7 @@
       ../../modules/shell.nix
       ../../modules/games.nix
       ../../modules/flatpak.nix
+      ../../modules/niri.nix
 
       ];
  
