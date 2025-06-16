@@ -56,6 +56,7 @@
     onlyoffice-desktopeditors
     kitty
     amule
+    chromium
 
   #THEMING
     libsForQt5.qt5ct
