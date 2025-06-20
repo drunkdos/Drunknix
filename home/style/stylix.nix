@@ -32,7 +32,7 @@ in
 
   stylix.fonts = {
     monospace = {
-      name = userSettings.font;
+      name = (userSettings.font+"Mono");
       package = userSettings.fontPkg;
     };
     serif = {
@@ -47,7 +47,9 @@ in
       name = "Noto Emoji";
       package = pkgs.noto-fonts-color-emoji;
     };
-
+    sizes = {
+    terminal = 11;
+    };
   };
 #  home.file.".config/hypr/hyprpaper.conf".text = ''
 #    preload = ''+config.stylix.image+''

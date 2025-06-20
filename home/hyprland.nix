@@ -2,8 +2,8 @@
 {
 
  imports = [
-   ./rofi.nix
-   ./fuzzel.nix
+   ./app/rofi.nix
+   ./app/fuzzel.nix
   ];
 
  services.mako = {

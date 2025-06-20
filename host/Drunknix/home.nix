@@ -6,6 +6,7 @@
   imports = [
    ../../home/style/stylix.nix
    ../../home/hyprland.nix
+   ../../home/app/kitty.nix
 
   ];
 

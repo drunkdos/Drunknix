@@ -20,6 +20,9 @@
      hyprland.url = "github:hyprwm/Hyprland";
      hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
+     niri.url = "github:sodiboo/niri-flake";
+
+
      zen-browser.url = "github:0xc000022070/zen-browser-flake";
 };
   outputs = { self, nixpkgs, nixpkgs-unstable, hyprland, home-manager, stylix, nix-flatpak,  ... }@inputs :
@@ -34,7 +37,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "darkmoss";
+  	theme = "dracula";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "phinger-cursors-light";
@@ -71,7 +74,8 @@
     nixosConfigurations.Drunknix= lib.nixosSystem {
        modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
+          {nixpkgs.overlays = [inputs.hyprpanel.overlay
+          inputs.niri.overlays.niri];}
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {

@@ -6,14 +6,14 @@ users.defaultUserShell = pkgs.fish;
 programs.fish.enable = true;
 
 environment.systemPackages = ( with pkgs; [
-    btop powertop #TASKMANAGER
+    btop powertop
     caligula #BootableUSB
     wayland-utils
     vulkan-tools
     libnotify
     rar zip unzip
     wget
-    fzf
+    fzf #search
     curl
     micro-full
     brightnessctl
@@ -23,8 +23,8 @@ environment.systemPackages = ( with pkgs; [
  ++ (with pkgs-unstable; [
   #unstable packages
     fastfetch
-    gowall
-    rclone
+    gowall #imageprocessing
+    rclone 
     yazi
     neovim
       ]);
