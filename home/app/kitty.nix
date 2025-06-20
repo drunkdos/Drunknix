@@ -1,14 +1,9 @@
 { config, pkgs, inputs, lib, stylix,... }:
 {
   programs.kitty = {
-  enable = true
+  enable = true;
   package = pkgs.kitty;
   settings = {
-    cursor_shape = beam;
+    cursor_shape = "underline";
     };
   };
-
-
-
-
-}
