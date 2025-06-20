@@ -4,5 +4,7 @@
   enable = true;
   package = pkgs.kitty;
   settings = {
+    cursor_shape = "underline";
     };
   };
+}
