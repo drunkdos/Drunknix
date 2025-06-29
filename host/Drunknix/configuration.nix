@@ -21,6 +21,7 @@
       ../../modules/games.nix
       ../../modules/flatpak.nix
       ../../modules/niri.nix
+      ../../modules/nh.nix
 
       ];
  
@@ -29,7 +30,7 @@
       device = "/dev/disk/by-uuid/76445cd8-7a2c-4613-84d2-1452d351f3fc";
       fsType = " btrfs";
     };
-
+  hardware.enableAllFirmware = true;
   hardware.openrazer.enable = true;
   environment.systemPackages = with pkgs; [
       openrazer-daemon
@@ -46,12 +47,12 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];  
   nix = {
-   	gc = {
-   	    automatic = true;
-  	    dates = "weekly";
-  	    persistent = true;
-  	    options = "--delete-older-than 15d";
-        };
+#   	gc = {
+#   	    automatic = true;
+#  	    dates = "weekly";
+#  	    persistent = true;
+#  	    options = "--delete-older-than 15d";
+#        };
     optimise = {
     	automatic = true;
     	dates = ["Mon *-*-* 00:00:00"];
