@@ -37,7 +37,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "dracula";
+  	theme = "AutoOrange";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "phinger-cursors-light";
