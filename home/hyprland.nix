@@ -19,9 +19,9 @@
     layer = "top";
     margin = 8;
     markup = true;
-
     };
-
  };
-
+programs.wlogout = {
+  enable = true;
+ };
  }
