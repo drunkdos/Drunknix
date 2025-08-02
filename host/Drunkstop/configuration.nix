@@ -36,6 +36,7 @@
         };
   };
 
+ hardware.enableAllFirmware = true;
 
  system.autoUpgrade = {
    enable = true;
