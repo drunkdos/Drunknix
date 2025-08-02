@@ -31,13 +31,13 @@
 #systemSettings
   systemSettings = {
    	system = "x86_64-linux";
-   	hostname = "Drunknix";
+   	hostname = "Drunkstop";
    	};
 #userSettings
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "AutoOrange";
+  	theme = "gruvobx-dark-medium";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "phinger-cursors-light";
@@ -71,7 +71,7 @@
   in
 
    {
-    nixosConfigurations.Drunknix= lib.nixosSystem {
+    nixosConfigurations.${systemSettings.hostname}= lib.nixosSystem {
        modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
           {nixpkgs.overlays = [inputs.hyprpanel.overlay

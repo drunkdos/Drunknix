@@ -30,7 +30,7 @@
     lutris
     steamtinkerlaunch
     airshipper
-
+    gzdoom
 
       ])
  ++ (with pkgs-unstable; [

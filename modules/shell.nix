@@ -6,6 +6,7 @@ users.defaultUserShell = pkgs.fish;
 programs.fish.enable = true;
 
 environment.systemPackages = ( with pkgs; [
+    clock-rs
     btop powertop
     caligula #BootableUSB
     wayland-utils

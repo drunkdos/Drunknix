@@ -18,6 +18,21 @@ nix.settings = {
   };
 
  
+ #Portals
+  xdg.portal = {
+  enable = true;
+  extraPortals = with pkgs; [
+    xdg-desktop-portal-wlr
+    xdg-desktop-portal-gtk
+    kdePackages.xdg-desktop-portal-kde
+    ];
+  config = {
+    # example with hyprland
+    hyprland.preferred = [ "hyprland" "gtk" ];
+  };
+};
+
+
   environment.systemPackages = with pkgs; [
     pyprland
     hyprpicker
