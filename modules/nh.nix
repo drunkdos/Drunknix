@@ -6,7 +6,7 @@
       enable = true;
       extraArgs = "--keep-since 7d --keep 5";
     };
-    flake = "/home/${userSettings.username}/nixos";
+    flake = "/home/${userSettings.username}/Drunknix";
   };
 
   environment.systemPackages = with pkgs; [
