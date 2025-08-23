@@ -18,6 +18,8 @@
       ../../modules/shell.nix
       ../../modules/games.nix
       ../../modules/flatpak.nix
+      ../../modules/niri.nix
+      ../../modules/nh.nix
       ];
 
  #nix Settings
@@ -37,6 +39,7 @@
   };
 
  hardware.enableAllFirmware = true;
+ hardware.bluetooth.enable = true;
 
  system.autoUpgrade = {
    enable = true;

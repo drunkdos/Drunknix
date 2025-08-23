@@ -37,7 +37,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "gruvobx-dark-medium";
+  	theme = "gruvbox-dark-medium";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "phinger-cursors-light";
@@ -74,8 +74,10 @@
     nixosConfigurations.${systemSettings.hostname}= lib.nixosSystem {
        modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
-          {nixpkgs.overlays = [inputs.hyprpanel.overlay
-          inputs.niri.overlays.niri];}
+          {nixpkgs.overlays = [
+            inputs.niri.overlays.niri
+            ];
+          }
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager {
