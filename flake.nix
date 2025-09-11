@@ -18,14 +18,12 @@
      nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
 
      hyprland.url = "github:hyprwm/Hyprland";
-     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-
      niri.url = "github:sodiboo/niri-flake";
-
-
      zen-browser.url = "github:0xc000022070/zen-browser-flake";
+     vicinae.url = "github:vicinaehq/vicinae";
+
 };
-  outputs = { self, nixpkgs, nixpkgs-unstable, hyprland, home-manager, stylix, nix-flatpak,  ... }@inputs :
+  outputs = { self, nixpkgs, nixpkgs-unstable, hyprland, home-manager, stylix, nix-flatpak, vicinae, ... }@inputs :
 
   let
 #systemSettings
@@ -37,7 +35,7 @@
   userSettings = rec {
   	username = "drunk";
   	name = "Drunkdos";
-  	theme = "gruvbox-dark-medium";
+  	theme = "tokyonight";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "phinger-cursors-light";
@@ -84,7 +82,11 @@
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "diocaneimpestato";
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = { imports =[ (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")];};
+            home-manager.users.${userSettings.username} = {
+            imports =[ (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")
+            vicinae.homeManagerModules.default
+            ];
+            };
             home-manager.extraSpecialArgs = {
             inherit inputs;
             inherit userSettings;};
