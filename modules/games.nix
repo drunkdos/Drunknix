@@ -39,6 +39,7 @@
     heroic
     prismlauncher
     sgdboop
+    olympus #celeste-modmanager
       ]);
 
 
