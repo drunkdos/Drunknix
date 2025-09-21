@@ -64,9 +64,10 @@ in
   '';
 
   home.file = {
-   ".config/hyprpanel/hyprpaneltheme.json".source = config.lib.stylix.colors {
-      template = builtins.readFile ./hyprpaneltheme.json.mustache;
-      extension = ".json";
+   ".config/stylix/color.css".source = config.lib.stylix.colors {
+      template = builtins.readFile ./color.css.mustache;
+      extension = ".css";
+
     };
     ".config/hypr/hyprcolor.conf".source = config.lib.stylix.colors {
       template = builtins.readFile ./hyprcolor.conf.mustache;
