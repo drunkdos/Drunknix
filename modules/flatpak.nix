@@ -11,6 +11,20 @@ boot.extraModulePackages = with config.boot.kernelPackages; [
   '';
   security.polkit.enable = true;
 
+ services.flatpak.overrides = {
+    global = {
+      # Force Wayland by default
+      Context.filesystems = [
+        "/nix/store:ro" # Expose Nix
+        "~/.icons:ro"
+      ];
+      Environment = {
+        # Fix un-themed cursor in some Wayland apps
+        XCURSOR_PATH = "/run/host/user-share/icons:/run/host/share/icons:~/.icons:ro";
+
+      };
+    };
+   };
 services.flatpak.enable = true;
   services.flatpak.packages = [
    "org.upscayl.Upscayl"
