@@ -7,12 +7,12 @@
     enable = true;
     wayland.enable = true;
     theme = "sddm-astronaut-theme";
+    package = lib.mkDefault pkgs.kdePackages.sddm;
     settings.Theme = {
           CursorTheme = config.stylix.cursor.name;
           CursorSize = config.stylix.cursor.size;
         };
   };
-  services.displayManager.sddm.package = lib.mkDefault pkgs.kdePackages.sddm;
 
   environment.systemPackages = [(
   pkgs.sddm-astronaut.override {
