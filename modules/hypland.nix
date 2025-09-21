@@ -46,6 +46,7 @@ nix.settings = {
     waybar
     wl-clipboard
     clipse
+    wayland-logout
   ];
 
 }
