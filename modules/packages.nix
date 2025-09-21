@@ -64,9 +64,6 @@
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
     catppuccin-cursors.latteLight
-    themix-gui
-
-    pywalfox-native #firfox-pywal serve per add-on
   ])
  ++
   #unstable packages
@@ -76,6 +73,7 @@
     vesktop
     anydesk
     rclone
+    kando
  ]);
 
 
