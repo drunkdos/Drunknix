@@ -8,7 +8,6 @@
     plugins = with pkgs; [
       rofi-bluetooth
       rofi-emoji-wayland
-      networkmanager_dmenu
     ];
 
     extraConfig = {
