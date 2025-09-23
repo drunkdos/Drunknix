@@ -23,10 +23,11 @@ environment.systemPackages = ( with pkgs; [
       ])
  ++ (with pkgs-unstable; [
   #unstable packages
+    yt-dlp
     fastfetch
     gowall #imageprocessing
     rclone 
     yazi
-    neovim
+    termusic
       ]);
 }
