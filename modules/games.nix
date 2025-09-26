@@ -31,13 +31,14 @@
     steamtinkerlaunch
     airshipper
     gzdoom
+    prismlauncher
+
 
       ])
  ++ (with pkgs-unstable; [
   #unstable packages
     r2modman
     heroic
-    prismlauncher
     sgdboop
     olympus #celeste-modmanager
       ]);
