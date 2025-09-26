@@ -37,7 +37,7 @@ nix.settings = {
     pyprland
     hyprpicker
     hyprcursor
-    hyprpaper
+    swaybg #hyprpaper not work so good
     waypaper
     hyprlock
     hypridle
@@ -47,6 +47,7 @@ nix.settings = {
     wl-clipboard
     clipse
     wayland-logout
+    swaynotificationcenter
   ];
 
 }
