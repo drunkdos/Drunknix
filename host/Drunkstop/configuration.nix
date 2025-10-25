@@ -18,8 +18,9 @@
       ../../modules/shell.nix
       ../../modules/games.nix
       ../../modules/flatpak.nix
-      ../../modules/niri.nix
       ../../modules/nh.nix
+      ../../modules/Jellyfin.nix
+      ../../modules/niri.nix
       ];
 
  #nix Settings
