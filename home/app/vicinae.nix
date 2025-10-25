@@ -6,38 +6,59 @@ let
     inherit (config.stylix) fonts;
 in
 {
-
+nix.settings = {
   extra-substituters = [ "https://vicinae.cachix.org" ];
   extra-trusted-public-keys = [ "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc=" ];
+  };
 
   services.vicinae = {
     enable = true; # default: false
     autoStart = true; # default: true
+    settings = {
+      closeOnFocusLoss = false;
+      faviconService = "googe"; # twenty | google | none
+      font = {
+         normal = "JetBrainsMono Nerd Font";
+         size = 10;
+         };
+      popToRootOnClose = false;
+      rootSearch.searchFiles = false;
+      theme = {
+         name = "stylix";
+         iconTheme = "Papirus";
+         };
+      window = {
+        csd = true;
+        opacity = 0.95;
+        rounding = 10;
+      };
+   };
+
   };
 
-  xdg.configFile."vicinae/vicinae.json".text = ''
-    {
-      "closeOnFocusLoss": false,
-      "faviconService": "google",
-      "font": {
-        "normal": "JetBrainsMono Nerd Font",
-        "size": 10
-      },
-      "popToRootOnClose": false,
-      "rootSearch": {
-        "searchFiles": true
-      },
-      "theme": {
-        "iconTheme": "Papirus",
-        "name": "stylix.json"
-      },
-      "window": {
-        "csd": true,
-        "opacity": 0.95,
-        "rounding": 10
-      }
-    }
-  '';
+#   xdg.configFile."vicinae/vicinae.json".text = ''
+#     {
+#       "closeOnFocusLoss": false,
+#       "faviconService": "google",
+#       "font": {
+#         "normal": "JetBrainsMono Nerd Font",
+#         "size": 10
+#       },
+#       "popToRootOnClose": false,
+#       "rootSearch": {
+#         "searchFiles": true
+#       },
+#       "theme": {
+#         "iconTheme": "Papirus",
+#         "name": "stylix.json"
+#       },
+#       "window": {
+#         "csd": true,
+#         "opacity": 0.95,
+#         "rounding": 10
+#       }
+#     }
+#   '';
 
   xdg.configFile."vicinae/themes/stylix.json".text = pkgs.lib.generators.toJSON {} {
     version = "1.0.0";
