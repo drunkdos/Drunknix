@@ -7,7 +7,6 @@
    ../../home/style/stylix.nix
    ../../home/hyprland.nix
    ../../home/app/kitty.nix
-   ../../home/app/vicinae.nix
   ];
 
   home.stateVersion = "24.05"; # Do not change.

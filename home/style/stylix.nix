@@ -51,12 +51,13 @@ in
     terminal = 11;
     };
   };
-#  home.file.".config/hypr/hyprpaper.conf".text = ''
-#    preload = ''+config.stylix.image+''
-#
-#    wallpaper = ,''+config.stylix.image+''
-#
-#  '';
+
+  home.file.".config/hypr/hyprpaper.conf".text = ''
+    preload = ''+config.stylix.image+''
+
+    wallpaper = ,''+config.stylix.image+''
+
+  '';
 
   home.file.".config/hypr/stylixwallpaper.conf".text = ''
     $wallpaper = ,''+config.stylix.image+''
@@ -87,12 +88,12 @@ in
     };
    };
 
-#   stylix.iconTheme = {
+   stylix.iconTheme = {
    # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
 #     package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
-#     dark = "Papirus-Dark"; # used
-#     light = "Papirus-Light"; # unused
-#    };
+     dark = "Papirus-Dark"; # used
+     light = "Papirus-Light"; # unused
+    };
 
  stylix.cursor = {
        name = userSettings.cursor;
@@ -119,6 +120,9 @@ in
     };
 
    home.packages = with pkgs; [
-   catppuccin-papirus-folders
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
+    libsForQt5.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
   ];
 }
