@@ -12,20 +12,19 @@
       ../../modules/wm/hypland.nix
       ../../modules/wm/niri.nix
       ../../modules/wm/sddm.nix
-
       ../../modules/app/packages.nix
       ../../modules/app/shell.nix
       ../../modules/app/flatpak.nix
       ../../modules/app/games.nix
-      ../../modules/hamachi.nix
       ../../modules/nh.nix
-      ../../modules/jellyfin.nix
+      ../../modules/services/jellyfin.nix
+      ../../modules/services/hamachi.nix
       ../../modules/style/stylix.nix
       ];
 
  #nix Settings
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes"];
 
 
  hardware.enableAllFirmware = true;

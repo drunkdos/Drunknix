@@ -1,4 +1,3 @@
- 
 {config, lib, pkgs, pkgs-unstable,inputs, ...}:
 {
   # List packages installed in system profile. To search, run:
@@ -73,7 +72,6 @@
     vesktop
     anydesk
     rclone
-    kando
  ]);
 
 
