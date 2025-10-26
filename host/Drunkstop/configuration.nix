@@ -7,47 +7,30 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/pipewire.nix
-      ../../modules/nvidia.nix
-      ../../modules/style/stylix.nix
-      ../../modules/hypland.nix
-      ../../modules/packages.nix
-      ../../modules/shell.nix
-      ../../modules/sddm.nix
+      ../../modules/hardware/pipewire.nix
+      ../../modules/hardware/nvidia.nix
+      ../../modules/vm/hypland.nix
+      ../../modules/vm/niri.nix
+      ../../modules/vm/sddm.nix
+
+      ../../modules/app/packages.nix
+      ../../modules/app/shell.nix
+      ../../modules/app/flatpak.nix
+      ../../modules/app/games.nix
       ../../modules/hamachi.nix
-      ../../modules/shell.nix
-      ../../modules/games.nix
-      ../../modules/flatpak.nix
       ../../modules/nh.nix
-      ../../modules/Jellyfin.nix
-      ../../modules/niri.nix
+      ../../modules/jellyfin.nix
+      ../../modules/style/stylix.nix
       ];
 
  #nix Settings
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix = {
-#    	gc = {
-#    	    automatic = true;
-#   	    dates = "weekly";
-#   	    persistent = true;
-#   	    options = "--delete-older-than 15d";
-#         };
-    optimise = {
-    	automatic = true;
-    	dates = ["Mon *-*-* 00:00:00"];
-        };
-  };
+
 
  hardware.enableAllFirmware = true;
  hardware.bluetooth.enable = true;
 
- system.autoUpgrade = {
-   enable = true;
-   flake = inputs.self.outPath;
-   dates = "weekly";
-   persistent = true;
-   };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
