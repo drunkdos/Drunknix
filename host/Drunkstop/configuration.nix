@@ -25,10 +25,8 @@
  #nix Settings
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
-
-
- hardware.enableAllFirmware = true;
- hardware.bluetooth.enable = true;
+  hardware.enableAllFirmware = true;
+  hardware.bluetooth.enable = true;
 
 
   # Bootloader.
