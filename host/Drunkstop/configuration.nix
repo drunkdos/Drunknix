@@ -9,9 +9,9 @@
       ./hardware-configuration.nix
       ../../modules/hardware/pipewire.nix
       ../../modules/hardware/nvidia.nix
-      ../../modules/vm/hypland.nix
-      ../../modules/vm/niri.nix
-      ../../modules/vm/sddm.nix
+      ../../modules/wm/hypland.nix
+      ../../modules/wm/niri.nix
+      ../../modules/wm/sddm.nix
 
       ../../modules/app/packages.nix
       ../../modules/app/shell.nix
