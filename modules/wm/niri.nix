@@ -1,7 +1,12 @@
 { inputs, config, pkgs, pkgs-unstable, ... }:
 
 {
-  # Enable Hyprland
+
+  imports =
+    [./waylandcommon.nix
+    ];
+
+  # Enable Niri
   programs.niri = {
      enable = true;
     };
@@ -9,8 +14,6 @@
 
   environment.systemPackages = with pkgs; [
   xwayland-satellite
-  swaybg
-  swaynotificationcenter
   ];
 
 }

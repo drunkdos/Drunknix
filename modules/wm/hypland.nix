@@ -1,6 +1,11 @@
 { inputs, config, pkgs, pkgs-unstable, ... }:
 
 {
+
+  imports =
+    [./waylandcommon.nix
+    ];
+
   # Enable Hyprland
   programs.hyprland = {
      enable = true;
@@ -37,17 +42,9 @@ nix.settings = {
     pyprland
     hyprpicker
     hyprcursor
-    swaybg #hyprpaper not work so good
-    waypaper
-    hyprlock
     hypridle
     hyprpolkitagent
     hyprshot
-    waybar
-    wl-clipboard
-    clipse
-    wayland-logout
-    swaynotificationcenter
   ];
 
 }
