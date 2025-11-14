@@ -17,8 +17,9 @@
       ../../modules/app/flatpak.nix
       ../../modules/app/games.nix
       ../../modules/nh.nix
-      ../../modules/services/jellyfin.nix
       ../../modules/services/caddy.nix
+      ../../modules/services/homer.nix
+      ../../modules/services/jellyfin.nix
       ../../modules/services/copyparty.nix
       ../../modules/services/hamachi.nix
       ../../modules/style/stylix.nix
