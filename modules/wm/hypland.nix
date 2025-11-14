@@ -42,8 +42,6 @@ nix.settings = {
     pyprland
     hyprpicker
     hyprcursor
-    hypridle
-    hyprpolkitagent
     hyprshot
   ];
 

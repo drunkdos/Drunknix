@@ -8,12 +8,18 @@
 
   # Enable Niri
   programs.niri = {
-     enable = true;
-    };
+    enable = true;
+   };
+
+  programs.uwsm.waylandCompositors.niri = {
+    prettyName = "niri";
+    comment = "niri compositor managed by UWSM";
+    binPath = "/run/current-system/sw/bin/niri";
+  };
 
 
   environment.systemPackages = with pkgs; [
-  xwayland-satellite
+    xwayland-satellite
   ];
 
 }

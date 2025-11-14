@@ -1,8 +1,9 @@
 { inputs, config, pkgs, pkgs-unstable, ... }:
 
 {
+
+
  environment.systemPackages = with pkgs; [
-    kdePackages.polkit-kde-agent-1
     waypaper
     waybar
     hyprlock
@@ -11,6 +12,8 @@
     clipse
     wayland-logout
     swaynotificationcenter
+    hyprpolkitagent
+    hypridle
   ];
 
 }
