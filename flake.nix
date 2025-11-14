@@ -20,10 +20,24 @@
      hyprland.url = "github:hyprwm/Hyprland";
      niri.url = "github:sodiboo/niri-flake";
      zen-browser.url = "github:0xc000022070/zen-browser-flake";
-     vicinae.url = "github:vicinaehq/vicinae";
-
+#     vicinae.url = "github:vicinaehq/vicinae";
+     copyparty.url = "github:9001/copyparty";
 };
-  outputs = { self, nixpkgs, nixpkgs-unstable, hyprland, home-manager, stylix, nix-flatpak, vicinae, ... }@inputs :
+
+
+  outputs = {
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      hyprland,
+      home-manager,
+      stylix,
+      nix-flatpak,
+      copyparty,
+      #vicinae,
+      ...
+  }@inputs:
+
 
   let
 #systemSettings
@@ -74,18 +88,21 @@
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
           {nixpkgs.overlays = [
             inputs.niri.overlays.niri
+            copyparty.overlays.default
             ];
           }
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
+          copyparty.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "diocaneimpestato";
             home-manager.useUserPackages = true;
             home-manager.users.${userSettings.username} = {
-            imports =[ (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")
-            vicinae.homeManagerModules.default
-            ];
+              imports =[
+                (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")
+#                 vicinae.homeManagerModules.default
+              ];
             };
             home-manager.extraSpecialArgs = {
             inherit inputs;

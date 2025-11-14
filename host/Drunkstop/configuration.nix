@@ -18,9 +18,13 @@
       ../../modules/app/games.nix
       ../../modules/nh.nix
       ../../modules/services/jellyfin.nix
+      ../../modules/services/caddy.nix
+      ../../modules/services/copyparty.nix
       ../../modules/services/hamachi.nix
       ../../modules/style/stylix.nix
       ];
+
+#  nixpkgs.config.permittedInsecurePackages = ["mbedtls-2.28.10"];
 
  #nix Settings
   nixpkgs.config.allowUnfree = true;
@@ -45,7 +49,7 @@
   networking = {
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 4682 ];
+      allowedTCPPorts = [ 4682 7777 ];
       allowedUDPPorts = [ 4692 ];
       };
     };
@@ -88,7 +92,7 @@
   users.users.drunk = {
     isNormalUser = true;
     description = "Drunkdos";
-    extraGroups = [ "networkmanager" "wheel" "audio"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "copyparty"];
     packages = with pkgs; [
     #  thunderbird
     ];
