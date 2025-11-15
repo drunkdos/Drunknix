@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{ config, lib, pkgs, pkgs-unstable, stylix, ... }:
 
 
 {
@@ -8,8 +8,8 @@
     virtualHost.domain = "drunk.ddns.net";
     virtualHost.caddy.enable = true;
     settings ={
-        title = "Drunkserver";
-        subtitle = "che l'autismo isa con te";
+        title = "Drunk-Homeserver";
+        subtitle = "che l'autismo sia con noi";
         header = true;
         footer = false;
         connectivityCheck = true;
@@ -25,6 +25,22 @@
         };
 
         theme = "default";
+        colors = with config.lib.stylix.colors; {
+          dark = {
+            highlight-primary = withHashtag.base09;
+            highlight-secondary = withHashtag.base08;
+            highlight-hover = withHashtag.base0A;
+            background = withHashtag.base00;
+            card-background = withHashtag.base01;
+            text = withHashtag.base07;
+            text-header = withHashtag.base07;
+            text-title = withHashtag.base07;
+            text-subtitle = withHashtag.base05;
+            card-shadow = "rgba(0, 0, 0, 0.4)";
+            link = withHashtag.base0D;
+            link-hover = withHashtag.base0A;
+          };
+        };
 
         message = {
           style = "is-warning";
@@ -54,7 +70,7 @@
             items = [
               {
                 name = "Jellyfin";
-                logo = "$\{../../assets/jellyfin.png}";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/jellyfin.png";
                 subtitle = "Guarda qualcosa 🏴‍☠";
                 tag = "app";
                 keywords = "mediaserver media streaming tv";
@@ -62,7 +78,7 @@
               }
               {
                 name = "Copyparty";
-                logo = "$\{../../assets/copyparty.png}";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/copyparty.png";
                 subtitle = "Fileshare";
                 tag = "app";
                 tagstyle = "is-success";
@@ -76,9 +92,9 @@
             items = [
               {
                 name = "Fritzbox";
-                logo = "assets/tools/sample.png";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/fritzbox.png";
                 tag = "other";
-                url = "http://192.168.0.1/";
+                url = "http://192.168.1.1/";
               }
             ];
           }
