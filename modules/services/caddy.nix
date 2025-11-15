@@ -14,34 +14,15 @@
       # Configurazione del dominio principale
       "drunk.ddns.net" = {
         extraConfig = ''
-          #  Blocco di gestione principale del dominio
-          handle {
-            # ➡️ Gestione del traffico  (Root del dominio)
-            # Qualsiasi richiesta che non è gestita da un blocco 'route' o 'handle'     respond "Hello, world!"
-          }
 
-          #  Blocco per Copyparty (sottodirectory /copyparty)
-          # Utilizziamo 'route' per forzare una corrispondenza esatta del prefisso
-          # e manipolare il percorso prima del proxy.
+          #  Blocco per Copyparty
           route /copyparty* {
-            # 1. Riscrive il percorso per rimuovere /copyparty/ prima di inviarlo al backend
-            # Questo è cruciale perché Copyparty si aspetta la root.
-
-
             # 2. Proxy verso la porta di Copyparty
-            reverse_proxy 127.0.0.1:3923{
-                # 💡 AGGIUNGI QUESTI HEADER
-                header_up X-Real-IP {remote_host}
-                header_up X-Forwarded-For {remote_host}
-                header_up Host {host}
-                header_up X-Forwarded-Proto {scheme}
-            }
+            reverse_proxy 127.0.0.1:3923
           }
 
           route /jellyfin* {
-            # 1. Riscrive il percorso per rimuovere /copyparty/ prima di inviarlo al backend
-            # Questo è cruciale perché Copyparty si aspetta la root.
-            # 2. Proxy verso la porta di Copyparty
+            # Proxy verso la porta di jellyfin
             reverse_proxy localhost:8096
           }
         '';
