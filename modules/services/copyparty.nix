@@ -9,9 +9,9 @@
   services.copyparty = {
     enable = true;
   # the user to run the service as
-    user = "drunk";
+    user = "drunkserver";
   # the group to run the service as
-    group = "copyparty";
+    group = "drunkserver";
   # directly maps to values in the [global] section of the copyparty config.
   # see `copyparty --help` for available options
     settings = {
@@ -44,7 +44,7 @@
     # create a volume at "/" (the webroot), which will
     "/shared" = {
       # share the contents of "/srv/copyparty"
-      path = "/home/copyparty/shared";
+      path = "/mnt/copyparty/shared";
       # see `copyparty --help-accounts` for available options
       access = {
         # everyone gets read-access, but
@@ -68,7 +68,7 @@
     };
     "/hidden" = {
       # share the contents of "/srv/copyparty"
-      path = "/home/copyparty/hidden";
+      path = "/mnt/copyparty/hidden";
       # see `copyparty --help-accounts` for available options
       access = {
         # everyone gets read-access, but
