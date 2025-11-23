@@ -18,6 +18,7 @@
       ../../modules/app/games.nix
       ../../modules/nh.nix
       ../../modules/services/caddy.nix
+      ../../modules/services/arr.nix
       ../../modules/services/homer.nix
       ../../modules/services/jellyfin.nix
       ../../modules/services/copyparty.nix
@@ -93,7 +94,7 @@
   users.users.drunk = {
     isNormalUser = true;
     description = "Drunkdos";
-    extraGroups = [ "networkmanager" "wheel" "audio" "copyparty"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "copyparty" "drunkserver"];
     packages = with pkgs; [
     #  thunderbird
     ];
