@@ -9,13 +9,14 @@
       ./hardware-configuration.nix
       ../../modules/hardware/pipewire.nix
       ../../modules/hardware/nvidia.nix
-      ../../modules/wm/hypland.nix
+#      ../../modules/wm/hypland.nix
       ../../modules/wm/niri.nix
       ../../modules/wm/sddm.nix
       ../../modules/app/packages.nix
       ../../modules/app/shell.nix
       ../../modules/app/flatpak.nix
       ../../modules/app/games.nix
+      ../../modules/app/android.nix
       ../../modules/nh.nix
       ../../modules/services/caddy.nix
       ../../modules/services/arr.nix
@@ -34,6 +35,10 @@
   hardware.enableAllFirmware = true;
   hardware.bluetooth.enable = true;
 
+  hardware.opentabletdriver={
+  enable = true;
+  daemon.enable = true;
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -52,10 +57,14 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [ 4682 7777 ];
-      allowedUDPPorts = [ 4692 ];
+      allowedUDPPorts = [ 4692 9];
+      };
+    interfaces = {
+      enp42s0 = {
+        wakeOnLan.enable = true;
       };
     };
-
+  };
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
@@ -94,7 +103,7 @@
   users.users.drunk = {
     isNormalUser = true;
     description = "Drunkdos";
-    extraGroups = [ "networkmanager" "wheel" "audio" "copyparty" "drunkserver"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "copyparty" "drunkserver" "adbusers"];
     packages = with pkgs; [
     #  thunderbird
     ];
