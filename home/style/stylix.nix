@@ -91,8 +91,8 @@ in
    stylix.iconTheme = {
    # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
 #     package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
-     dark = "Papirus-Dark"; # used
-     light = "Papirus-Light"; # unused
+     dark = "breeze-dark"; # used
+     light = "breeze-light"; # unused
     };
 
  stylix.cursor = {
