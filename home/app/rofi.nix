@@ -3,11 +3,11 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
     theme = lib.mkForce "rofi";
     plugins = with pkgs; [
       rofi-bluetooth
-      rofi-emoji-wayland
+      rofi-emoji
     ];
 
     extraConfig = {
@@ -33,7 +33,7 @@
   };
  home.packages = with pkgs; [
       rofi-bluetooth
-      rofi-emoji-wayland
+      rofi-emoji
   ];
 
 }

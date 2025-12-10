@@ -2,15 +2,15 @@
   description = "DrunkNix flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-25.05";
+    nixpkgs.url = "nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-25.05";
+    home-manager.url = "github:nix-community/home-manager/release-25.11";
    # home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     stylix = {
-      url = "github:danth/stylix/release-25.05";
+      url = "github:danth/stylix/release-25.11";
 #      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
      };
@@ -86,6 +86,7 @@
     nixosConfigurations.${systemSettings.hostname}= lib.nixosSystem {
        modules = [
           (./. + "/host" + ("/" + systemSettings.hostname) + "/configuration.nix")
+          ./modules/animesaturn.nix
           {nixpkgs.overlays = [
             inputs.niri.overlays.niri
             copyparty.overlays.default
