@@ -48,13 +48,12 @@
     group = "drunkserver";
   };
 
-    services.readarr = {
+  services.lidarr = {
     enable = true;
-    package = pkgs-unstable.readarr;
     openFirewall = true;
     user = "drunkserver";
     group = "drunkserver";
-  };
+    };
 
   services.bazarr = {
     enable = true;
@@ -73,5 +72,6 @@
     openFirewall = true;
     user = "drunkserver";
     group = "drunkserver";
-  };
+    };
+
 }
