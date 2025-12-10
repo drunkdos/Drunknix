@@ -117,10 +117,10 @@
                 url = "https://drunk.ddns.net/radarr";
               }
               {
-                name = "Readarr";
-                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/readarr.png";
+                name = "Lidarr";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/lidarr.png";
                 tag = "aargh";
-                url = "https://drunk.ddns.net/readarr";
+                url = "https://drunk.ddns.net/lidarr";
               }
               {
               name = "Bazarr";

@@ -18,7 +18,7 @@ environment.systemPackages = ( with pkgs; [
     curl
     micro-full
     brightnessctl
-    jdk23
+    jdk25
     pywal16
       ])
  ++ (with pkgs-unstable; [
@@ -26,7 +26,6 @@ environment.systemPackages = ( with pkgs; [
     yt-dlp
     fastfetch
     gowall #imageprocessing
-    rclone 
     yazi
     termusic
       ]);

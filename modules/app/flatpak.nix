@@ -33,5 +33,8 @@ services.flatpak.enable = true;
    "com.obsproject.Studio"
    "org.kde.krita"
    "tv.kodi.Kodi"
+   "org.onlyoffice.desktopeditors"
+   "com.github.zocker_160.SyncThingy"
+   "md.obsidian.Obsidian"
     ];
 }

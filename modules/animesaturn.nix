@@ -13,11 +13,14 @@ let
       repo = "animesaturnDownloaderGo";
       rev = "v${version}";
       # Hash provvisorio per i sorgenti (Nix ti darà quello vero al primo errore)
-      hash = lib.fakeSha256;
+      hash = "sha256-UzxweZkD+d8a19xkqTGQrVturqxcbfKfNWAIt3sTp9A=";
     };
+    subPackages = [ "cmd/animesaturn-downloader" ];
 
+    # Rimuovi il codice Go della GUI dalla fase di build
+    excludedPackages = [ "cmd/animesaturn-downloader-gui" ];
     # Hash provvisorio per le dipendenze Go
-    vendorHash = lib.fakeSha256;
+    vendorHash = "sha256-Usbm4vKbySlTJaLEq1k38bgFkOU/d3gweWVXZDFtAWo=";
 
     doCheck = false;
 

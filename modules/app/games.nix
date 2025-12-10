@@ -40,5 +40,6 @@
    "net.retrodeck.retrodeck"
    "io.github.ryubing.Ryujinx"
    "org.DolphinEmu.dolphin-emu"
+   "sh.ppy.osu"
   ];
 }

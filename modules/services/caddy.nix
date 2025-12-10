@@ -35,8 +35,8 @@
           route /radarr* {
             reverse_proxy localhost:7878
           }
-          route /readarr* {
-            reverse_proxy localhost:8787
+          route /lidarr* {
+            reverse_proxy localhost:8686
           }
           route /prowlarr* {
             reverse_proxy localhost:9696

@@ -4,7 +4,8 @@
  services.jellyfin = {
     enable = true;
     openFirewall = true;
-    user = "drunk";
+    user = "drunkserver";
+    group = "drunkserver";
   };
   environment.systemPackages = [
     pkgs.jellyfin

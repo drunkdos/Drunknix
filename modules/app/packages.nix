@@ -3,6 +3,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
+programs.animesaturn-downloader.enable = true;
 
   services.desktopManager.plasma6.enable = true;
 
@@ -24,35 +25,26 @@
   with pkgs; [
   #stable packages
 
-    inputs.zen-browser.packages."${system}".default #zenbrowser temp flake
+    inputs.zen-browser.packages."${system}".default #zenbrowser flake
 
 
   #System App
-    blueman
-    pavucontrol
+    bluejay
+    pulseaudio #FOR COMMAND
+    lxqt.pavucontrol-qt #FOR GUI
     kdePackages.partitionmanager
-	mediawriter
     kdePackages.kirigami
-    kdePackages.ktorrent
     kdePackages.dolphin
     kdePackages.kservice	libsForQt5.kservice
-    kdePackages.kaccounts-providers
-    kdePackages.kaccounts-integration
     kdePackages.kio-admin
-    kdePackages.libkgapi
     kdePackages.ark
     kdePackages.knewstuff
-    kdePackages.kio-gdrive
     kdePackages.qtmultimedia
 
   #User App
-    better-control
-    easyeffects
     keepassxc
     mpv
     kdePackages.kate
-    freeoffice
-    onlyoffice-desktopeditors
     kitty
     amule
     chromium
@@ -62,16 +54,11 @@
     kdePackages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
-    catppuccin-cursors.latteLight
   ])
  ++
   #unstable packages
     (with pkgs-unstable; [
-    mcontrolcenter
-#    rofi-wayland
     vesktop
-    anydesk
-    rclone
  ]);
 
 
@@ -81,7 +68,6 @@
     fonts.packages = with pkgs; [
 	nerd-fonts.jetbrains-mono
 	nerd-fonts.departure-mono
-    scientifica
       ];
 
 }
