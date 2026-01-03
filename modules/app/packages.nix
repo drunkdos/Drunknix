@@ -59,6 +59,7 @@ programs.animesaturn-downloader.enable = true;
   #unstable packages
     (with pkgs-unstable; [
     vesktop
+    orca-slicer
  ]);
 
 

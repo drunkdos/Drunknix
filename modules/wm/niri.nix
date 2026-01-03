@@ -9,7 +9,7 @@
   # Enable Niri
   programs.niri = {
     enable = true;
-    package = pkgs.niri-stable;
+    package = pkgs.niri;
    };
 
   environment.systemPackages = with pkgs; [
