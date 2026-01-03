@@ -23,10 +23,15 @@
       ../../modules/services/homer.nix
       ../../modules/services/jellyfin.nix
       ../../modules/services/copyparty.nix
+      ../../modules/services/sunshine.nix
       ../../modules/services/hamachi.nix
       ../../modules/style/stylix.nix
       ];
 
+  fileSystems."/mnt/copyparty" = {
+      device = "/dev/disk/by-uuid/dfd43c2f-1b25-45a9-bdc1-7d12ee6d6885";
+      fsType = " btrfs";
+    };
 #  nixpkgs.config.permittedInsecurePackages = ["mbedtls-2.28.10"];
 
  #nix Settings
