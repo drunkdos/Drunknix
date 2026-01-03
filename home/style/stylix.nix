@@ -86,6 +86,7 @@ in
       template = builtins.readFile ./waybar-colors.css.mustache;
       extension = ".css";
     };
+
    };
 
    stylix.iconTheme = {
@@ -102,10 +103,11 @@ in
        };
 
  gtk.enable = true;
-# gtk.iconTheme = {
-#       name = "Papirus-Dark";
+ gtk.colorScheme = "dark";
+ gtk.iconTheme = {
+       name = "breeze-dark";
 #       package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
-#      };
+      };
 
    home.pointerCursor = {
     enable = true;
