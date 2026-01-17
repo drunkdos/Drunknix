@@ -67,6 +67,11 @@
           reverse_proxy localhost:8080
         '';
       };
+      "mine.drunk.ddns.net" = {
+        extraConfig = ''
+          reverse_proxy localhost:8090
+        '';
+      };
 
     };
   };
