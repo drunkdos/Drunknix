@@ -134,8 +134,34 @@
                 tag = "aargh";
                 url = "https://drunk.ddns.net/prowlarr";
               }
+              {
+              name = "Jackett";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/jackett.png";
+                tag = "aargh";
+                url = "https://drunk.ddns.net/jackett";
+              }
             ];
           }
+
+          {
+           name = "Games";
+            icon = "fas fa-gamepad";
+            items = [
+              {
+              name = "Pufferpanel";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pufferpanel.png";
+                tag = "games";
+                url = "https://mine.drunk.ddns.net";
+              }
+              {
+              name = "Romm";
+                logo = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/romm.png";
+                tag = "games";
+                url = "https://romm.drunk.ddns.net";
+              }
+            ];
+          }
+
         ];
       };
 
