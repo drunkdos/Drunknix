@@ -74,4 +74,17 @@
     group = "drunkserver";
     };
 
+  services.jackett = {
+    enable = true;
+    package = pkgs-unstable.jackett;
+    openFirewall = true;
+    user = "drunkserver";
+    group = "drunkserver";
+    port = 9117;
+    };
+
+  services.flaresolverr = {
+    enable = true;
+    openFirewall = true;
+  };
 }
