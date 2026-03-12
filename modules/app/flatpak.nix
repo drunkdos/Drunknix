@@ -1,8 +1,15 @@
-{config, lib, pkgs, pkgs-unstable,inputs, ...}:
+{
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  ...
+}:
 
 {
 
-boot.extraModulePackages = with config.boot.kernelPackages; [
+  boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
   ];
   boot.kernelModules = [ "v4l2loopback" ];
@@ -11,7 +18,7 @@ boot.extraModulePackages = with config.boot.kernelPackages; [
   '';
   security.polkit.enable = true;
 
- services.flatpak.overrides = {
+  services.flatpak.overrides = {
     global = {
       # Force Wayland by default
       Context.filesystems = [
@@ -21,20 +28,20 @@ boot.extraModulePackages = with config.boot.kernelPackages; [
       Environment = {
         # Fix un-themed cursor in some Wayland apps
         XCURSOR_PATH = "/run/host/user-share/icons:/run/host/share/icons:~/.icons:ro";
-
       };
     };
-   };
-services.flatpak.enable = true;
+  };
+
+  services.flatpak.enable = true;
   services.flatpak.packages = [
-   "org.upscayl.Upscayl"
-   "org.jdownloader.JDownloader"
-   "net.waterfox.waterfox"
-   "com.obsproject.Studio"
-   "org.kde.krita"
-   "tv.kodi.Kodi"
-   "org.onlyoffice.desktopeditors"
-   "com.github.zocker_160.SyncThingy"
-   "md.obsidian.Obsidian"
-    ];
+    "org.upscayl.Upscayl"
+    "org.jdownloader.JDownloader"
+    "net.waterfox.waterfox"
+    "com.obsproject.Studio"
+    "org.kde.krita"
+    "tv.kodi.Kodi"
+    "org.onlyoffice.desktopeditors"
+    "com.github.zocker_160.SyncThingy"
+    "md.obsidian.Obsidian"
+  ];
 }
