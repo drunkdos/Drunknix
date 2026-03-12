@@ -25,6 +25,8 @@
       ../../modules/services/copyparty.nix
       ../../modules/services/sunshine.nix
       ../../modules/services/hamachi.nix
+      ../../modules/services/gameserver.nix
+      ../../modules/services/podman.nix
       ../../modules/style/stylix.nix
       ];
 
@@ -61,7 +63,7 @@
   networking = {
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 4682 7777 ];
+      allowedTCPPorts = [ 4682 7777 8091];
       allowedUDPPorts = [ 4692 9];
       };
     interfaces = {
@@ -117,10 +119,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  ];
+  environment.systemPackages = with pkgs; [ ];
 
 
 
