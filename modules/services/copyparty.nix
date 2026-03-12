@@ -66,9 +66,9 @@
         nohash = "\.iso$";
       };
     };
-    "/hidden" = {
+    "/drunk" = {
       # share the contents of "/srv/copyparty"
-      path = "/mnt/copyparty/hidden";
+      path = "/mnt/copyparty/private";
       # see `copyparty --help-accounts` for available options
       access = {
         # everyone gets read-access, but
