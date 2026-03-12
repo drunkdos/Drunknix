@@ -2,7 +2,8 @@
 {
     services.pufferpanel = {
         enable = true;
-        extraGroups = [drunkserver];
+        extraGroups = ["drunkserver"];
+        extraPackages = [ pkgs.jre ];
         environment = {
             PUFFER_WEB_HOST = ":8090";
             PUFFER_DAEMON_SFTP_HOST = ":5657";
@@ -13,4 +14,10 @@
      networking.firewall = {
        allowedTCPPorts = [ 8090 ];
        };
+
+    environment.systemPackages = with pkgs; [
+        pufferpanel
+        jre
+    ];
+
 }
