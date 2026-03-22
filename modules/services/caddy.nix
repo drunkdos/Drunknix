@@ -15,40 +15,42 @@
       "drunk.ddns.net" = {
         extraConfig = ''
 
-          #  Blocco per Copyparty
-          route /copyparty* {
-            # 2. Proxy verso la porta di Copyparty
-            reverse_proxy 127.0.0.1:3923
-          }
-    # ----------------------------------------------------
+                 #Copyparty
+                 route /copyparty* {
+                   # 2. Proxy verso la porta di Copyparty
+                   reverse_proxy 127.0.0.1:3923
+                 }
+           # ----------------------------------------------------
 
-          route /jellyfin* {
-            # Proxy verso la porta di jellyfin
-            reverse_proxy localhost:8096
-          }
+                 route /jellyfin* {
+                   # Proxy verso la porta di jellyfin
+                   reverse_proxy localhost:8096
+                 }
 
-   # ----------------------------------------------------
+          # ----------------------------------------------------
 
-          route /sonarr* {
-            reverse_proxy localhost:8989
-          }
-          route /radarr* {
-            reverse_proxy localhost:7878
-          }
-          route /lidarr* {
-            reverse_proxy localhost:8686
-          }
-          route /prowlarr* {
-            reverse_proxy localhost:9696
-          }
-          route /bazarr* {
-            reverse_proxy localhost:6767
-          }
-
+                 route /sonarr* {
+                   reverse_proxy localhost:8989
+                 }
+                 route /radarr* {
+                   reverse_proxy localhost:7878
+                 }
+                 route /lidarr* {
+                   reverse_proxy localhost:8686
+                 }
+                 route /prowlarr* {
+                   reverse_proxy localhost:9696
+                 }
+                 route /bazarr* {
+                   reverse_proxy localhost:6767
+                 }
+                 route /jackett* {
+                   reverse_proxy localhost:9117
+                 }
         '';
       };
 
-    # ----------------------------------------------------
+      # ----------------------------------------------------
 
       # 2. Configurazione Sottodominio Jellyseerr
       "jellyseer.drunk.ddns.net" = {
@@ -58,7 +60,7 @@
         '';
       };
 
-    # ----------------------------------------------------
+      # ----------------------------------------------------
 
       # 3. Configurazione Sottodominio qBittorrent (Opzionale ma Consigliato)
       # Se vuoi anche qBittorrent su sottodominio per massima pulizia:
@@ -72,8 +74,16 @@
           reverse_proxy localhost:8090
         '';
       };
+       "romm.drunk.ddns.net" = {
+        extraConfig = ''
+          reverse_proxy localhost:8091
+        '';
+      };
 
     };
   };
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  networking.firewall.allowedTCPPorts = [
+    80
+    443
+  ];
 }
