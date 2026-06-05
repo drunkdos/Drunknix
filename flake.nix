@@ -2,10 +2,10 @@
   description = "DrunkNix flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-25.11";
+    nixpkgs.url = "nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
    # home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -15,7 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
      };
 
-     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
+     nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
 
      hyprland.url = "github:hyprwm/Hyprland";
      niri.url = "github:sodiboo/niri-flake";
