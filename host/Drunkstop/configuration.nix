@@ -27,6 +27,7 @@
       ../../modules/services/hamachi.nix
       ../../modules/services/gameserver.nix
       ../../modules/services/podman.nix
+      #../../modules/services/ebook.nix
       ../../modules/style/stylix.nix
       ];
 
@@ -119,7 +120,9 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = [
+  pkgs-unstable.freerdp
+  ];
 
 
 
