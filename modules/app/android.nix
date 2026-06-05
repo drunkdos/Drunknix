@@ -9,7 +9,6 @@
     droidcam
       ])
  ++ (with pkgs-unstable; [
-    revanced-cli
       ]);
 
 }
