@@ -31,6 +31,8 @@
      # specify the account name as the key
      drunk.passwordFile = "/home/drunk/.ssh/drunk";
      orbi.passwordFile = "/home/drunk/.ssh/orbi";
+     ospite.passwordFile = "/home/drunk/.ssh/ospite";
+
    };
 
   # create a group
@@ -50,7 +52,7 @@
         # everyone gets read-access, but
         r = "*";
         # users "ed" and "k" get read-write
-        rw = [ "drunk" "orbi" ];
+        rw = [ "drunk" "orbi" "ospite"];
       };
       # see `copyparty --help-flags` for available options
       flags = {
@@ -67,27 +69,34 @@
       };
     };
     "/drunk" = {
-      # share the contents of "/srv/copyparty"
       path = "/mnt/copyparty/private";
-      # see `copyparty --help-accounts` for available options
       access = {
-        # everyone gets read-access, but
         r = "drunk";
-        # users "ed" and "k" get read-write
         rw = [ "drunk" ];
       };
-      # see `copyparty --help-flags` for available options
       flags = {
-        # "fk" enables filekeys (necessary for upget permission) (4 chars long)
         fk = 4;
-        # scan for new files every 60sec
         scan = 60;
-        # volflag "e2d" enables the uploads database
         e2d = true;
-        # "d2t" disables multimedia parsers (in case the uploads are malicious)
         d2t = true;
-        # skips hashing file contents if path matches *.iso
         nohash = "\.iso$";
+      };
+    };
+
+      "/torrent" = {
+      path = "/mnt/copyparty/torrent";
+      access = {
+        r = [ "drunk" "orbi" ];
+        rw = [ "drunk" ];
+      };
+      flags = {
+        fk = 4;
+        scan = 60;
+        e2d = true;
+        d2t = true;
+        nohash = "\.iso$";
+        dotsrch = true;
+        dots = true;
       };
     };
   };
