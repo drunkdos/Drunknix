@@ -24,11 +24,11 @@ programs.animesaturn-downloader.enable = true;
   environment.systemPackages = (
   with pkgs; [
   #stable packages
-
     inputs.zen-browser.packages."${system}".default #zenbrowser flake
 
 
   #System App
+    bluez
     bluejay
     pulseaudio #FOR COMMAND
     lxqt.pavucontrol-qt #FOR GUI

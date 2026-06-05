@@ -9,20 +9,21 @@
     gamescopeSession.enable = true;
     extraCompatPackages = [
       pkgs.proton-ge-bin
+      pkgs.steamtinkerlaunch
       ];
     };
 
     environment.systemPackages = ( with pkgs; [
     protonup-qt
     protontricks
-    wine
-    wine64
+    wine-wayland
     winetricks
     lutris
     steamtinkerlaunch
     airshipper
     gzdoom
     prismlauncher
+    sgdboop
 
 
       ])
@@ -30,7 +31,6 @@
   #unstable packages
     r2modman
     heroic
-    sgdboop
     olympus #celeste-modmanager
       ]);
 
