@@ -35,7 +35,7 @@ programs.animesaturn-downloader.enable = true;
     kdePackages.partitionmanager
     kdePackages.kirigami
     kdePackages.dolphin
-    kdePackages.kservice	libsForQt5.kservice
+    kdePackages.kservice
     kdePackages.kio-admin
     kdePackages.ark
     kdePackages.knewstuff

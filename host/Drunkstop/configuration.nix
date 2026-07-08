@@ -7,7 +7,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/hardware/pipewire.nix
+#      ../../modules/hardware/pipewire.nix
       ../../modules/hardware/nvidia.nix
 #      ../../modules/wm/hypland.nix
       ../../modules/wm/niri.nix

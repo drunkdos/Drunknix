@@ -36,7 +36,7 @@
     swaynotificationcenter
     hyprpolkitagent
     hypridle
-    swww
+    awww
     libxkbcommon
   ];
 
