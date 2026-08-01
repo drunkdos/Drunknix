@@ -16,7 +16,7 @@
     environment.systemPackages = ( with pkgs; [
     protonup-qt
     protontricks
-    wine-wayland
+    wineWow64Packages.waylandFull #a quanto pare la miglior versione FullWayland
     winetricks
     lutris
     steamtinkerlaunch
