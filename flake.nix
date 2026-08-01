@@ -52,9 +52,9 @@
   	theme = "tokyonight";
   	font = "JetBrainsMonoNerdFont";
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
-  	cursor = "phinger-cursors-light";
-  	cursorPkg = pkgs.phinger-cursors;
-  	cursorSize = 32;
+  	cursor = "graphite-light";
+  	cursorPkg = pkgs.graphite-cursors;
+  	cursorSize = 30;
   };
 
 
