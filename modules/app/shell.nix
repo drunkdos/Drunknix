@@ -25,6 +25,8 @@
       brightnessctl
       jdk25
       pywal16
+      zenity #dolphin-script
+      libcamera #wireplumber lo ha chiesto
     ])
     ++ (with pkgs-unstable; [
       #unstable packages
