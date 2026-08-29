@@ -15,13 +15,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
      };
 
-     nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
 
-     hyprland.url = "github:hyprwm/Hyprland";
-     niri.url = "github:sodiboo/niri-flake";
-     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    niri.url = "github:sodiboo/niri-flake";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 #     vicinae.url = "github:vicinaehq/vicinae";
-     copyparty.url = "github:9001/copyparty";
+    copyparty.url = "github:9001/copyparty";
+
+    umbriel.url = "github:noctalia-dev/umbriel";
 };
 
 
@@ -29,11 +31,11 @@
       self,
       nixpkgs,
       nixpkgs-unstable,
-      hyprland,
       home-manager,
       stylix,
       nix-flatpak,
       copyparty,
+      umbriel,
       #vicinae,
       ...
   }@inputs:
@@ -95,6 +97,8 @@
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           copyparty.nixosModules.default
+          umbriel.nixosModules.default
+
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.backupFileExtension = "diocaneimpestato";
