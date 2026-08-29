@@ -29,6 +29,7 @@
 
   environment.systemPackages = with pkgs; [
     waypaper
+    wlogout
     waybar
     hyprlock
     wl-clipboard

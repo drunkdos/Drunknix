@@ -5,10 +5,10 @@
   environment.systemPackages =
   ( with pkgs; [
     android-tools
-    qtscrcpy
     droidcam
       ])
  ++ (with pkgs-unstable; [
+     qtscrcpy
       ]);
 
 }
