@@ -11,7 +11,6 @@
 
     stylix = {
       url = "github:danth/stylix/release-26.05";
-#      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
      };
 
@@ -20,9 +19,7 @@
     niri.url = "github:sodiboo/niri-flake";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-#     vicinae.url = "github:vicinaehq/vicinae";
     copyparty.url = "github:9001/copyparty";
-
     umbriel.url = "github:noctalia-dev/umbriel";
 };
 
@@ -35,7 +32,6 @@
       stylix,
       nix-flatpak,
       copyparty,
-      umbriel,
       #vicinae,
       ...
   }@inputs:
@@ -97,7 +93,6 @@
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           copyparty.nixosModules.default
-          umbriel.nixosModules.default
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
@@ -106,7 +101,6 @@
             home-manager.users.${userSettings.username} = {
               imports =[
                 (./. + "/host" + ("/" + systemSettings.hostname) + "/home.nix")
-#                 vicinae.homeManagerModules.default
               ];
             };
             home-manager.extraSpecialArgs = {
