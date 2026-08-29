@@ -9,6 +9,7 @@
       ./hardware-configuration.nix
 #      ../../modules/hardware/pipewire.nix
       ../../modules/hardware/nvidia.nix
+      ../../modules/hardware/nfc.nix
 #      ../../modules/wm/hypland.nix
       ../../modules/wm/niri.nix
       ../../modules/wm/sddm.nix
