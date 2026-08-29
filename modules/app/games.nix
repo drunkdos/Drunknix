@@ -23,7 +23,6 @@
     airshipper
     gzdoom
     prismlauncher
-    sgdboop
 
 
       ])
@@ -32,6 +31,7 @@
     r2modman
     heroic
     olympus #celeste-modmanager
+    sgdboop
       ]);
 
 
