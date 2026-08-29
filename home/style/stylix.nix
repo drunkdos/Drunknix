@@ -89,9 +89,7 @@ in
 
    };
 
-   stylix.iconTheme = {
-   # package = pkgs.catppuccin-papirus-folder.override {flavor = "macchiato"; accent = "teal"; };
-#     package  = pkgs.papirus-icon-theme.override{color = "deeporange";};
+   stylix.icons = {
      dark = "breeze-dark"; # used
      light = "breeze-light"; # unused
     };
@@ -111,14 +109,14 @@ in
 
    home.pointerCursor = {
     enable = true;
-    name = userSettings.cursor;
-    size = userSettings.cursorSize;
-    gtk.enable = true;
-    x11.enable = true;
-    hyprcursor = {
-      enable = true;
-      size = userSettings.cursorSize;
-      };
+#     name = userSettings.cursor;
+#     size = userSettings.cursorSize;
+#     gtk.enable = true;
+#     x11.enable = true;
+     hyprcursor = {
+       enable = true;
+       size = userSettings.cursorSize;
+       };
     };
 
    home.packages = with pkgs; [
