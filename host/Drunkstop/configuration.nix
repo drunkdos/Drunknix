@@ -12,6 +12,7 @@
       ../../modules/hardware/nfc.nix
 #      ../../modules/wm/hypland.nix
       ../../modules/wm/niri.nix
+      ../../modules/wm/umbriel.nix
       ../../modules/wm/sddm.nix
       ../../modules/app/packages.nix
       ../../modules/app/shell.nix
@@ -19,6 +20,7 @@
       ../../modules/app/games.nix
       ../../modules/app/android.nix
       ../../modules/nh.nix
+      ../../modules/xdg-mime.nix
       ../../modules/services/caddy.nix
       ../../modules/services/arr.nix
       ../../modules/services/homer.nix
@@ -38,7 +40,9 @@
     };
 #  nixpkgs.config.permittedInsecurePackages = ["mbedtls-2.28.10"];
 
- #nix Settings
+
+
+#nix Settings
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   hardware.enableAllFirmware = true;
