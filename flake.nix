@@ -20,8 +20,13 @@
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     copyparty.url = "github:9001/copyparty";
-    umbriel.url = "github:noctalia-dev/umbriel";
-};
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
+    umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
+  };
 
 
   outputs = {
@@ -52,7 +57,7 @@
   	fontPkg = pkgs.nerd-fonts.jetbrains-mono;
   	cursor = "graphite-light";
   	cursorPkg = pkgs.graphite-cursors;
-  	cursorSize = 30;
+  	cursorSize = 36;
   };
 
 
