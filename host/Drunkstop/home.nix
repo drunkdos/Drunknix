@@ -7,6 +7,8 @@
    ../../home/style/stylix.nix
    ../../home/app/kitty.nix
    ../../home/app/rofi.nix
+   ../../home/wm/noctalia.nix
+
   ];
 
   home.stateVersion = "24.05"; # Do not change.
@@ -21,6 +23,23 @@
     settings.user= {
       name  = "drunkdos";
       email = "drunkdos.97@gmail.com";
+    };
+  };
+
+
+
+   xdg.portal = {
+    enable = true;
+    extraPortals =
+      with pkgs; [
+        kdePackages.xdg-desktop-portal-kde
+        xdg-desktop-portal-gtk
+      ];
+
+    config = {
+      common = {
+        "org.freedesktop.impl.portal.FileChooser" = "kde";
+      };
     };
   };
 

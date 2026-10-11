@@ -7,18 +7,20 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-#      ../../modules/hardware/pipewire.nix
       ../../modules/hardware/nvidia.nix
       ../../modules/hardware/nfc.nix
-#      ../../modules/wm/hypland.nix
-      ../../modules/wm/niri.nix
+      #desktopManager
       ../../modules/wm/umbriel.nix
       ../../modules/wm/sddm.nix
+     ../../modules/style/stylix.nix
+      #App
       ../../modules/app/packages.nix
       ../../modules/app/shell.nix
       ../../modules/app/flatpak.nix
       ../../modules/app/games.nix
       ../../modules/app/android.nix
+      ../../modules/app/artcraft.nix
+      #Services
       ../../modules/nh.nix
       ../../modules/xdg-mime.nix
       ../../modules/services/caddy.nix
@@ -30,8 +32,6 @@
       ../../modules/services/hamachi.nix
       ../../modules/services/gameserver.nix
       ../../modules/services/podman.nix
-      #../../modules/services/ebook.nix
-      ../../modules/style/stylix.nix
       ];
 
   fileSystems."/mnt/copyparty" = {
