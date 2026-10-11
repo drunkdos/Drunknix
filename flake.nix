@@ -26,6 +26,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       };
     umbriel.url = "git+https://github.com/noctalia-dev/umbriel";
+
+    nix-craftapps = {
+      url = "github:olafkfreund/nix-craftapps";
+      inputs.nixpkgs.follows = "nixpkgs";
+      };
+
   };
 
 
@@ -37,7 +43,7 @@
       stylix,
       nix-flatpak,
       copyparty,
-      #vicinae,
+      nix-craftapps,
       ...
   }@inputs:
 
@@ -98,6 +104,7 @@
           stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           copyparty.nixosModules.default
+          nix-craftapps.nixosModules.default
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
